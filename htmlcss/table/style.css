@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+
+}
+
+.main_header {
+    height: 8%;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.main_header>div {
+    margin-right: auto;
+}
+
+.centre_box {
+    height: 88%;
+    width: 100%;
+    /* background-color: rgb(0, 255, 42); */
+    display: flex;
+}
+
+.right_centre_box {
+    height: 100%;
+    width: 70%;
+    background-color: royalblue;
+}
+
+.html>div {
+    margin-top: 2px;
+    height: 33%;
+    width: 100%;
+    background-color: seashell;
+    display: flex;
+}
+
+.CSS {
+    height: 33%;
+    width: 100%;
+    background-color: salmon;
+
+}
+
+.js {
+    height: 33%;
+    width: 100%;
+    background-color: tomato;
+
+}
+
+.left_centre_box {
+    height: 100%;
+    width: 30%;
+    /* background-color: saddlebrown; */
+}
+
+.boxes3 {
+    height: 4%;
+    width: 100%;
+    background-color: rgb(20, 43, 148);
+}
+
+.button {
+    background-color: darkgray;
+    border-radius: 5px;
+    text-align: center;
+    margin: 4px 2px;
+    height: 80%;
+    width: 8%;
+
+}
+
+.button2 {
+    background-color: rgb(141, 216, 11);
+    border-radius: 5px;
+    text-align: center;
+    margin: 4px 2px;
+    height: 80%;
+    width: 8%;
+
+}
+
+
+.html .icons {
+    display: flex;
+    margin-left: auto;
+    height: 20px;
+    align-items: center;
+    color: white;
+}
+
+
+
+.icons>div {
+    background-color: rgb(20, 43, 148);
+    padding: 0 5px;
+    margin-left: 5px;
+}
+
+#slash-icon {
+    padding: 0 5px;
+    border-radius: 3px;
+    margin: 2px;
+    background-color: #FF3C41;
+    font-weight: 900;
+    color: white;
+}
+
+.html {
+    position: relative;
+}
+
+
+
+.icons div {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    display: none;
+}
+
+/* 
+.icons>div>div:hover div {
+    display: block;
+}
+
+.icons>div>div:hover div div:hover {
+    background-color: sandybrown;
+} */

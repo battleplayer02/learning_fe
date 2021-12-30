@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+main {
+    height: 100%;
+    display: grid;
+    /*  
+    rows 
+    cols
+     */
+    grid-template: repeat(12, 1fr)/repeat(12, 1fr);
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "s1 c c c c c c c c c c s2"
+        "s1 c c c c c c c c c c s2"
+        "s1 c c c c c c c c c c s2"
+        "s1 c c c c c c c c c c s2"
+        "s1 c c c c c c c c c c s2"
+        "s1 c c c c c c c c c c s2"
+        "s1 c c c c c c c c c c s2"
+        "s1 c c c c c c c c c c s2"
+        "s1 c c c c c c c c c c s2"
+        "s1 f f f f f f f f f f s2"
+        "s1 f f f f f f f f f f s2";
+}
+
+.header {
+    /* grid-column: 1/-1; */
+    grid-area: h;
+    background: lightcoral;
+}
+
+.sidebar {
+    /* grid-row: 2/12; */
+    grid-area: s1;
+    background: lightblue;
+}
+
+.content {
+    /* grid-column: 2/-1;
+    grid-row: 2/-2; */
+    grid-area: c;
+    background: lightgreen;
+}
+
+.footer {
+    /* grid-row: 12/13;
+    grid-column: 1/-1; */
+    grid-area: f;
+    background: lightseagreen;
+}
+.sidebar2{
+    grid-area: s2;
+}
+main>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

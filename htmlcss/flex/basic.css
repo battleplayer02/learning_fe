@@ -1,0 +1,147 @@
+/* .container{
+    display: flex;
+    /* justify-content: flex-end; */
+/* background: red; */
+height: 100%;
+align-items: center;
+}
+
+*/
+/* .container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-content: center;
+    by default
+    align-items: center;
+    background-color: red;
+    height: 100%;
+} */
+
+
+
+/* flex-start(default) flex-end center space-around
+space-between space-evenly */
+
+/* position of items */
+/* .logout {
+    margin-left: auto;
+} */
+
+/* .search {
+    margin-left: auto;
+} */
+
+/* 
+.home {
+    margin-right: auto;
+} */
+
+
+/* The flex property */
+/* it allows you to set the 
+width of the items according to the 
+width of the parent */
+
+/* Everything will take up equal amount of space  */
+/* .container>div {
+    flex: 1;
+} */
+/* 
+.container .logout {
+    flex: 2;
+} */
+
+/* or you can do is */
+/* .container > div{
+    width: 33.3333%;
+} */
+/*flex-grow, flex-shrink, flex-basis */
+
+/* if you want to make search to be twice as wide as 
+others */
+/* .container>div {
+    flex: 1;
+
+}
+
+
+.container>.search {
+    flex: 3;
+} */
+
+/* Make something where only home and logout do
+ the flexing */
+
+/* .container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+} */
+/* 
+.home {
+    flex: 1;
+}
+
+.logout {
+    flex: 1;
+} */
+
+
+
+/* align self and align items and 
+justify self and justify ontent */
+.container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    background-color: black;
+}
+
+.logout {
+    align-self: flex-start;
+}
+
+.home {
+    justify-self: flex-end;
+}
+
+/* 
+
+.search {
+    align-self: center;
+} */
+
+
+
+/* Flex direction Column and justify content */
+/* .container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+
+.home{
+    align-self: flex-end;
+}
+.logout{
+    align-self: flex-start;
+}
+
+.search{
+    align-self: center;
+} */
+
+/* with align items */
+/* .container {
+    border: 5px solid #ffcc5c;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: flex-end;
+} */

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    background: red;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+
+.sidebar1{
+    background: blue;;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+body .main .sidebar1 .text{
+    margin-left: 40%;
+    padding: 8px;
+    width: fit-content;
+    border-radius: 15px;
+}
+
+.sidebar1 > .text:hover{
+    background: grey;
+}
+.profile{
+    margin-top: auto;
+}

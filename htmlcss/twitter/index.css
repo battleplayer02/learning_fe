@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+html,body{
+    height: 100%;
+}
+main{
+    height: 100%;
+}
+.content {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+.sidebar1 .icon:hover{
+    background-color: #e6e6e6;
+}
+.sidebar1 .container .text:hover{
+    background-color: #ccc;
+}
+
+
+
+

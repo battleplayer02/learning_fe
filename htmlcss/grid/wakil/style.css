@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 200px 1fr;
+}
+
+.header {
+    grid-column: 2 / 3;
+    background: red;
+}
+
+.s1 {
+    background: orange;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.s1>div{
+    margin-top: 30px;
+    margin-left: 50px;
+    background-color: gray;
+    padding: 30px;
+}
+
+.s2 {
+    background: yellow;
+    /* grid-row: span 2; */
+    grid-column: 3/4;
+    grid-row: 1/-1;
+
+}
+
+.content {
+    grid-column: 2 / 3;
+    background: blue;
+
+}
+
+.home {
+    height: 30%;
+    background: grey;
+    display: flex;
+    align-items: center;
+}
+
+.home>.text {
+    margin-right: auto;
+    color: white;
+    margin-left: 10px;
+    font-weight: 900;
+}
+
+.wih {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    background: green;
+}
+
+.wic {
+    width: 100%;
+}
+
+.wih>.icon {
+    height: 50px;
+    width: 50px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.wic>.icon {
+    display: flex;
+    align-items: center;
+}
+
+.wic>.icon>div {
+    background: rgb(128, 124, 124);
+}
+
+.wic>.icon>div {
+    margin: 5px;
+}
+
+.tweet {
+    margin-left: auto !important;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.show-more {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twitter-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
