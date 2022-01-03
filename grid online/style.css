@@ -1,0 +1,20 @@
+.grid {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px;
+    grid-gap: 5px;
+}
+
+.grid div {
+    border: 1px solid black;
+}
+
+.div-9 {
+    grid-column: 4/6;
+}
+
+.div-1 {
+    grid-column: 1/3;
+}

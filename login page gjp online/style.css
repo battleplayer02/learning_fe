@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+main {
+    height: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 19px 27px 72px 4px rgba(156, 145, 145, 0.75);
+    -webkit-box-shadow: 19px 27px 72px 4px rgba(156, 145, 145, 0.75);
+    -moz-box-shadow: 19px 27px 72px 4px rgba(156, 145, 145, 0.75);
+}
+
+.login-in-to {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: blue;
+    font-weight: bold;
+
+}
+
+.login {
+    color: rgb(0, 183, 255);
+    font-weight: bolder;
+    margin-bottom: 15px;
+    font-size: small;
+}
+
+.label-text {
+    color: blue;
+    margin-bottom: 10px;
+    font-size: small;
+}
+
+.input-text input {
+    margin-bottom: 15px;
+    border: 1px solid blue;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.btn button {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.ftg-pw {
+    font-size: small;
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+}
+
+.outer {
+    position: relative;
+}
+
+.plus {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.plus .circle {
+    border: 1px solid white;
+    height: 20px;
+    width: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}

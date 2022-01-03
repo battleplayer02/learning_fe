@@ -1,0 +1,52 @@
+.layout {
+    height: 100%;
+    display: grid;
+    grid-template: 50px auto 50px/200px auto;
+    grid-template-areas:
+        "h h"
+        "s c"
+        "f f";
+}
+.layout header {
+    grid-area: h;
+}
+.layout footer {
+    grid-area: f;
+}
+.layout aside {
+    grid-area: s;
+}
+.layout main {
+    grid-area: c;
+}
+
+
+
+.layout header nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.layout nav div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout header nav .home {
+    margin-right: auto;
+    flex: 0.5;
+}
+
+.layout header nav .search {
+    flex: 1;
+    margin-right: auto;
+}
+
+.layout header nav .logout {
+    flex: 0.5;
+}

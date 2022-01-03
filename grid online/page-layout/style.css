@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.layout {
+    background: lightblue;
+}
+
+header {
+    background: lightgreen;
+}
+
+footer {
+    background: tomato;
+}
+
+aside {
+    background-color: lightgray;
+}
+
+main {
+    background: lightpink;
+}
+
+.layout>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+
+.layout header div:nth-child(1) {
+    background: hotpink;
+}
+
+.layout header div:nth-child(2) {
+    background-color: khaki;
+}
+
+.layout header div:nth-child(3) {
+    background-color: blueviolet;
+}

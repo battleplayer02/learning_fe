@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+}
+
+.parent {
+    display: flex;
+    background-color: blue;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.div-1 {
+    background: red;
+}
