@@ -1,11 +1,11 @@
 .layout {
     height: 100%;
     display: grid;
-    grid-template: 50px auto 50px/200px auto;
+    grid-template: 50px auto 50px/200px auto 200px;
     grid-template-areas:
-        "h h"
-        "s c"
-        "f f";
+        "h h h"
+        "s c r"
+        "f f f";
 }
 .layout header {
     grid-area: h;
@@ -19,7 +19,9 @@
 .layout main {
     grid-area: c;
 }
-
+.layout .r-sidebar {
+    grid-area: r;
+}
 
 
 .layout header nav {

@@ -1,0 +1,29 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.outer {
+    background: lightskyblue;
+}
+
+.outer>header {
+    background: tomato;
+}
+
+.outer header .plus {
+    background: white;
+}
+
+.outer footer {
+    background: tomato;
+}
+
+.outer header {
+    background: tomato;
+}
