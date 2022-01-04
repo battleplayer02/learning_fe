@@ -6,3 +6,30 @@
 6. Understanding Array map().
 7. Understanding React render arrays.
 8. Loading images through .map().(making a images folder but in these case moving the folder to public)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+npx create-react-app my-app
+
+
+
+
+
+
+
