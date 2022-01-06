@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 export default function Test2() {
     let [counter, setCounter] = useState(0);
     // let counter = 0;
-    function inc() {
+    function inc() {    
         setCounter(counter + 1);
         console.log('clicked', counter);
     }

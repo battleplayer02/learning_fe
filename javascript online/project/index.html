@@ -11,6 +11,23 @@
 </head>
 
 <body>
+    <div class="dialog-box">
+        <div>
+            <h2>
+                Add A New Task
+            </h2>
+        </div>
+        <div>
+            <input type="text" placeholder="Enter the title of task" id="task-title">
+        </div>
+
+        <div>
+            <textarea placeholder="Enter the description of task" id="task-description"></textarea>
+        </div>
+        <div>
+            <button onclick="addTodo()">Add</button>
+        </div>
+    </div>
     <div class="outer">
         <header>
             <div>
@@ -18,35 +35,12 @@
                     My Todo Application
                 </h2>
             </div>
-            <div class="plus">
+            <div class="plus" onclick="add()">
                 <div> + </div>
             </div>
         </header>
         <main>
-            <div class="todo">
-                <header>
-                    <span>Title of task</span>
-                </header>
-                <div class="todo-text">
-                    <textarea></textarea>
-                </div>
-            </div>
-            <div class="todo">
-                <header>
-                    <span>Title of task</span>
-                </header>
-                <div class="todo-text">
-                    <textarea></textarea>
-                </div>
-            </div>
-            <div class="todo">
-                <header>
-                    <span>Title of task</span>
-                </header>
-                <div class="todo-text">
-                    <textarea></textarea>
-                </div>
-            </div>
+            
         </main>
         <footer></footer>
     </div>
