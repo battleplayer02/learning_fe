@@ -92,6 +92,17 @@
     display: none;
 }
 
-.dialog-box * {
-    opacity: 1;
+.todo header .close {
+    background: red;
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+
+}
+
+.todo header .minimize {
+    background: green;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
 }
