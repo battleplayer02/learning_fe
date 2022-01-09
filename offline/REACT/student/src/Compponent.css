@@ -1,0 +1,25 @@
+html, body, #root {
+    height: 100%;
+}
+
+.parent {
+    display: flex;
+    height: 100%;
+}
+
+
+.parent .form-student {
+    background-color: tomato;
+    width: 50%;
+    height: 100%;
+}
+
+.parent .display-data {
+    background-color: lightskyblue;
+    width: 50%;
+    height: 100%;
+}
+
+td {
+    border: 1px solid black;
+}

@@ -1,0 +1,29 @@
+React 
+
+Frontend Library 
+
+Javascript
+es module exports import require 
+
+React Frontend => Browser
+
+Node js terminal 
+
+
+terminal Settimeout setinterval -> nodejs 
+
+
+React CDN local system 
+link
+script
+
+URLs =>Uniform Resource Locator
+
+
+
+
+
+
+
+
+
