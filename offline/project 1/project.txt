@@ -18,3 +18,8 @@ Login => server => token => frontend setlocalStorage
 Home => getuserFromToken goto home page / goto login page
 Logout => removeToken
 
+create a ui for product 
+create a product controller
+send the product from backend in a get request
+map the product arr in the frontend
+functionality of + - buttons in a product component
