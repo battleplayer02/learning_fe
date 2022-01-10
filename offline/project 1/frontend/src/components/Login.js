@@ -17,6 +17,7 @@ export default function Login() {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
             })
+            console.log(resData.data.user);
             if (resData.data.success == 1) {
                 history("/");
             }
