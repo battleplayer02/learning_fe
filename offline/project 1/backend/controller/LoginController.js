@@ -9,8 +9,8 @@ loginRouter.post('/login', (req, res) => {
         });
     } else {
         res.json({
-            success: 1,
-            message: 'Login Successful'
+            success: 0,
+            message: 'Login Unsuccessful'
         });
     }
 });
