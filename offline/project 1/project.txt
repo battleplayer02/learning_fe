@@ -1,7 +1,13 @@
 1. Folder frontend => npx create-react-app frontend
 2. Folder backend  => npm init -y , npm i express
-
-3. backend index.js  
-4. npm i nodemon -D
-5. backend/controller
-6. backend/middleware
+3.  backend index.js  
+4.  npm i nodemon -D
+5.  backend/controller
+6.  backend/middleware
+7.  setup routing and create login page using your prev code 
+8.  install npm i react-router-dom
+9.  created two routs login and ./ in App.js in frontend
+10  Inserted login page html in login component in components Folder
+11. inserted the css code in App.css 
+12  redirect to specific page after login
+13. JWT.sign() and JWT.verify() bcrypt.hash() and bcrypt.compare()
