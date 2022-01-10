@@ -5,22 +5,24 @@ let db = [];
 const SECRET = 'something very secret'
 // posr request to /login
 loginRouter.post('/login', (req, res) => {
-    const { email, password } = req.body;
-    const user = db.find(user => user.email === email && bcrypt.compare(user.password, password));
-    if (user) {
-        let token = jwt.sign({ email }, SECRET, { expiresIn: '24h' });
-        // console.log(token);
-        res.json({
-            success: 1,
-            message: 'Login Successful',
-            token
-        });
-    } else {
-        res.json({
-            success: 0,
-            message: 'Login Unsuccessful'
-        });
-    }
+    setTimeout(() => {
+        const { email, password } = req.body;
+        const user = db.find(user => user.email === email && bcrypt.compare(user.password, password));
+        if (user) {
+            let token = jwt.sign({ email }, SECRET, { expiresIn: '24h' });
+            // console.log(token);
+            res.json({
+                success: 1,
+                message: 'Login Successful',
+                token
+            });
+        } else {
+            res.json({
+                success: 0,
+                message: 'Login Unsuccessful'
+            });
+        }
+    }, 5000);
 });
 
 loginRouter.post('/signup', async (req, res) => {
