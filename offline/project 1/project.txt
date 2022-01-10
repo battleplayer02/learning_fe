@@ -13,3 +13,8 @@
 13. JWT.sign() and JWT.verify() bcrypt.hash() and bcrypt.compare()
 14. npm i jsonwebtoken 
 15. npm i bcrypt
+
+Login => server => token => frontend setlocalStorage
+Home => getuserFromToken goto home page / goto login page
+Logout => removeToken
+
