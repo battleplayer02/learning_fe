@@ -1,0 +1,7 @@
+1. Folder frontend => npx create-react-app frontend
+2. Folder backend  => npm init -y , npm i express
+
+3. backend index.js  
+4. npm i nodemon -D
+5. backend/controller
+6. backend/middleware

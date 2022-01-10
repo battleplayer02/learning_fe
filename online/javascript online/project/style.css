@@ -1,0 +1,108 @@
+.outer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.outer>header {
+    height: 60px !important;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 5px black;
+}
+
+.outer header h2 {
+    margin-left: 50px;
+}
+
+.outer header .plus {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 50px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.outer footer {
+    margin-top: auto;
+    height: 50px;
+}
+
+.outer main {
+    display: grid;
+    height: calc(100% - 110px);
+    overflow-y: auto;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.outer main .todo {
+    background: white;
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.outer .todo header {
+    background: #f0f0f0;
+    border-radius: 10px 10px 0 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.outer .todo header span {
+    margin-left: 10px;
+}
+
+.todo-text {
+    background-color: red;
+    height: 90%;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.todo-text textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+
+.dialog-box {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.313);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.todo header .close {
+    background: red;
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+
+}
+
+.todo header .minimize {
+    background: green;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}

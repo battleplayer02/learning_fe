@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="dialog-box">
+        <div class="wrapper">
+            <div>
+                <h2>
+                    Add A New Task
+                </h2>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter the title of task" id="task-title">
+            </div>
+
+            <div>
+                <textarea placeholder="Enter the description of task" id="task-description"></textarea>
+            </div>
+            <div>
+                <button onclick="addTodo()">Add</button>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <header>
+            <div>
+                <h2>
+                    My Todo Application
+                </h2>
+            </div>
+            <div class="plus" onclick="add()">
+                <div> + </div>
+            </div>
+        </header>
+        <main>
+            <!-- all todos will be added here -->
+
+        </main>
+        <footer></footer>
+    </div>
+</body>
+
+
+
+
+<script src="script.js"></script>
+
+</html>
