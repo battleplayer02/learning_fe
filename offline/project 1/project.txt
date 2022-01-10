@@ -11,3 +11,5 @@
 11. inserted the css code in App.css 
 12  redirect to specific page after login
 13. JWT.sign() and JWT.verify() bcrypt.hash() and bcrypt.compare()
+14. npm i jsonwebtoken 
+15. npm i bcrypt

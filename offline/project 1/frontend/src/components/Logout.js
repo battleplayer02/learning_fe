@@ -5,7 +5,7 @@ export default function Logout() {
     return (
         <button
             onClick={() => {
-                localStorage.removeItem("login")
+                localStorage.removeItem("token")
                 history("/login")
             }}
         >Logout</button>

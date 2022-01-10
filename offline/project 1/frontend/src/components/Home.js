@@ -5,7 +5,7 @@ import Logout from './Logout'
 export default function Home() {
     const history = useNavigate()
     useEffect(() => {
-        if (localStorage.getItem("login") !== "true") {
+        if (!localStorage.getItem("token")) {
             history("/login")
         }
     }, [])
