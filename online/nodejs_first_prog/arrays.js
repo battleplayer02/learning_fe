@@ -56,3 +56,13 @@ let multiply = arr.reduce(mul);
 // 1,2,3,4,5, => 1 * 2 * 3 * 4 * 5
 
 
+
+
+
+// grid 
+// flex 
+// position 
+// float
+// display
+// box-sizing
+// border-radius

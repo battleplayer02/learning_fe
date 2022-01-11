@@ -22,7 +22,7 @@ loginRouter.post('/login', (req, res) => {
                 message: 'Login Unsuccessful'
             });
         }
-    }, 5000);
+    }, 1000);
 });
 
 loginRouter.post('/signup', async (req, res) => {

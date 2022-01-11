@@ -1,0 +1,153 @@
+1.	
+Which of the following statements are TRUE about an SQL query?
+P : An SQL query can contain a HAVING clause even
+if it does not have a GROUP BY clause
+Q : An SQL query can contain a HAVING clause only
+if it has a GROUP BY clause
+R : All attributes used in the GROUP BY clause must
+appear in the SELECT clause
+S : Not all attributes used in the GROUP BY clause
+need to appear in the SELECT clause
+a.	
+P and R
+b.	
+P and S
+c.	
+Q and R
+d.	
+Q and S
+
+
+T-SQL, which stands for Transact-SQL and is sometimes referred to as TSQL, is an extension of the SQL language used primarily within Microsoft SQL Server. ... All applications that communicate with SQL Server, regardless of the application's user interface, do so by sending T-SQL statements to the server
+
+
+
+
+
+
+
+
+Consider the following ORACLE relations : One (x, y) = {<2, 5>, <1, 6>, <1, 6>, <1, 6>, <4, 8>, <4, 8>} Two (x, y) = {<2, 55>, <1, 1>, <4, 4>, <1, 6>, <4, 8>, <4, 8>, <9, 9>, <1, 6>} Consider the following two SQL queries SQ1 and SQ2 :
+SQ1 : SELECT * FROM One)
+
+           EXCEPT
+
+      (SELECT * FROM Two);
+
+SQ2 : SELECT * FROM One)
+
+        EXCEPT ALL
+
+      (SELECT * FROM Two);
+
+For each of the SQL queries, what is the cardinality (number of rows) of the result obtained when applied to the instances above ?
+
+
+
+
+Report the answerHow to use PrepInsta Quiz
+Question 8
+
+Time: 00:00:00Which of the following statement is true ?
+
+
+
+
+Report the answerHow to use PrepInsta Quiz
+Start
+Question 9
+
+Time: 00:00:00What is the purpose of the SQL AS clause ?
+
+
+
+
+Report the answerHow to use PrepInsta Quiz
+Start
+Question 10
+
+Time: 00:00:00The document containing the XML schema for the XML output by SET STATISTICS XML is located at :
+
+
+
+
+Report the answerHow to use PrepInsta Quiz
+Start
+
+Login/Signup
+
+Personalized Analytics only Availble for Logged in users
+
+Analytics below shows your performance in various Mocks on PrepInsta
+
+Your average Analytics for this Quiz
+
+Rank
+
+-
+
+Percentile
+
+0%
+
+Start Preparing
+Detailed performance
+Completed
+
+6/0
+
+
+
+Table A
+Id Name Age
+----------------
+12 Arun 60
+15 Shreya 24
+99 Rohit 11
+
+Table B
+Id Name Age
+----------------
+15 Shreya 24
+25 Hari 40
+98 Rohit 20
+99 Rohit 11
+
+Table C
+Id Phone Area
+-----------------
+10 2200 02
+99 2100 01
+Consider the above tables A, B and C. How many tuples does the result of the following SQL query contains?
+SELECT A.id
+FROM A
+WHERE A.age > ALL (SELECT B.age FROM B
+WHERE B. name = "arun")
+a.	
+4
+b.	
+3
+c.	
+0
+d.	
+1
+
+
+
+
+
+
+
+
+
+
+Consider a database table T containing two columns X and Y each of type integer. After the creation of the table, one record (X=1, Y=1) is inserted in the table. Let MX and My denote the respective maximum values of X and Y among all records in the table at any point in time. Using MX and MY, new records are inserted in the table 128 times with X and Y values being MX+1, 2*MY+1 respectively. It may be noted that each time after the insertion, values of MX and MY change. What will be the output of the following SQL query after the steps mentioned above are carried out?
+SELECT Y FROM T WHERE X=7;
+
+
+
+
+
+
+
+

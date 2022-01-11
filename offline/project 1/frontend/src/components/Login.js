@@ -7,6 +7,8 @@ export default function Login() {
     const history = useNavigate();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [emailCheck, setEmailChech] = useState(false)
+    const [passwordCheck, setCheckPassword] = useState(false)
 
     // if user is already logged in, redirect to home
     useEffect(async () => {
@@ -26,8 +28,20 @@ export default function Login() {
 
     // login send request to server and set localStorage
     const handelClick = async e => {
-        setLoading(true);
         e.preventDefault()
+        if (!email.includes('@') || !email.includes('.') || email.length == 0) {
+            setEmailChech("Enter a valid email")
+            return
+        }
+        if (password.length == 0) {
+            setCheckPassword("Password connot be empty")
+            return;
+        }
+        if (password.length < 6) {
+            setCheckPassword("Password must be at least 6 characters")
+            return;
+        }
+        setLoading(true);
         let responseData = await axios.post("http://localhost:8080/api/login", {
             email,
             password
@@ -55,12 +69,15 @@ export default function Login() {
                             <div className="login-in-to">Login In To</div>
                             <div className="label-text">Email-id</div>
                             <div className="input-text">
+                                {emailCheck && <p style={{ color: "red", fontSize: "10px" }}>{emailCheck}</p>}
                                 <input
                                     onChange={e => setEmail(e.target.value)}
                                     type="email" placeholder="Enter your email" />
+
                             </div>
                             <div className="label-text">Password</div>
                             <div className="input-text">
+                                {passwordCheck && <p style={{ color: "red", fontSize: "10px" }}>{passwordCheck}</p>}
                                 <input
                                     onChange={e => setPassword(e.target.value)}
                                     type="password" placeholder="*************" />
