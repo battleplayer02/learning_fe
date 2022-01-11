@@ -1,7 +1,8 @@
 import React from 'react'
+import { useLocalStorageState } from '../UseLocalStorageHook';
 import CartContext from './CartContext'
 export default function ContextWrapper({ children }) {
-    const [cart, setCart] = React.useState([]);
+    const [cart, setCart] = useLocalStorageState("cart", []);
     // write a function that will add the product to the cart
     const addToCart = (product) => {
         let check = cart.find(item => item.id === product.id)
