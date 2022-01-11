@@ -33,7 +33,7 @@ export default function Home() {
     }, [])
 
     return (
-        loading == true ? <>Loading...</>
+        loading === true ? <>Loading...</>
             :
             <div className='header'>
                 <Navbar user={user} />

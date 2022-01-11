@@ -14,12 +14,17 @@
 14. npm i jsonwebtoken 
 15. npm i bcrypt
 
-Login => server => token => frontend setlocalStorage
-Home => getuserFromToken goto home page / goto login page
-Logout => removeToken
+16. Login => server => token => frontend setlocalStorage
+17. Home => getuserFromToken goto home page / goto login page
+18. Logout => removeToken
 
-create a ui for product 
-create a product controller
-send the product from backend in a get request
-map the product arr in the frontend
-functionality of + - buttons in a product component
+19. create a ui for product 
+20. create a product controller
+21. send the product from backend in a get request
+22. map the product arr in the frontend
+23. functionality of + - buttons in a product component
+
+24. create a context Folder
+25. create a context file => CartContext.js'
+26. create a CartWrapper component with a state of cart and add to cart
+27. wrap the app component in the cartwrapper component
