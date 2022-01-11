@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import CartContext from '../context/CartContext'
 import "../Products.css"
-export default function Products({ name, price, image, quantity }) {
+
+export default function Products({ name, price, image, quantity, id }) {
     const [count, setCount] = useState(0)
+    const { addToCart } = useContext(CartContext)
 
     const inc = () => {
         if (count <= quantity) {
@@ -15,7 +18,9 @@ export default function Products({ name, price, image, quantity }) {
         }
     }
 
-
+    const handelAddToCart = () => {
+        addToCart({ name, price, image, count, id })
+    }
 
     return (
 
@@ -36,7 +41,9 @@ export default function Products({ name, price, image, quantity }) {
                     onClick={inc}
                 >+</button>{count}<button
                     onClick={minus}>-</button><br />
-                <button>Add To Cart</button>
+                <button
+                    onClick={handelAddToCart}
+                >Add To Cart</button>
             </div>
         </div>
 

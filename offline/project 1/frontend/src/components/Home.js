@@ -40,7 +40,7 @@ export default function Home() {
                 <div className='grid-container'>
                     {
                         productArr.map(item => {
-                            return <Products key={item.id} name={item.name} price={item.price} image={item.image} quantity={item.quantity} />
+                            return <Products key={item.id} name={item.name} price={item.price} image={item.image} quantity={item.quantity} id={item.id} />
                         })
                     }
                 </div>
