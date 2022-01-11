@@ -1,0 +1,54 @@
+1.  What are Pure Components?
+Ans.The React.PureComponent is a special type of React.Component that is optimized for pure rendering.
+    and does not implement shouldComponentUpdate() or componentWillReceiveProps().
+
+2.   Why should we not update the state directly?
+Ans. It will not rerender the component. 
+
+3.   What is the purpose of callback function as an argument of setState()?
+Ans. As setState is asynchronous, it will not update the state immediately.
+    It will update the state after the callback function is executed and as an arguemnt it provides previous state.
+
+
+4  What is the difference between HTML and React event handling?
+Ans 
+
+5  How to bind methods or event handlers in JSX callbacks?
+
+
+6.  What is "key" prop and what is the benefit of using it in arrays of elements?
+
+7.  Explain useRef hook in react.
+
+8  What are forward refs?
+
+9.  What is the use of children prop in react
+
+10 Which is preferred option with in callback refs and findDOMNode()?
+
+11 Why virtual dom update is faster than the traditional HTMLDom
+
+12 What are controlled and uncontrolled component
+
+13 What is the difference between createElement and cloneElement?
+
+14 What are the different phases of component lifecycle?
+
+15 What are Higher-Order Components? // routing Route component element
+
+16 What is the purpose of using super constructor with props argument?
+
+17 Why React uses className over class attribute?
+
+18 What are fragments,Why fragments are better than container divs?
+
+19 What are portals in React?
+
+20 What are the advantages and disadvantages of React?
+
+
+
+
+
+
+

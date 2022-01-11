@@ -7,6 +7,8 @@ export default function Signup() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
+    const [emailCheck, setEmailChech] = useState(false)
+    const [passwordCheck, setCheckPassword] = useState(false)
 
     // if user is already logged in, redirect to home
     useEffect(async () => {
@@ -26,6 +28,19 @@ export default function Signup() {
     // signup send request to server and set localStorage
     const handelClick = async e => {
         e.preventDefault()
+        if (!email.includes('@') || !email.includes('.') || email.length == 0) {
+            setEmailChech("Enter a valid email")
+            return
+        }
+        if (password.length < 6) {
+            setCheckPassword("Password must be at least 6 characters")
+            return;
+        }
+        if (password.length == 0) {
+            setCheckPassword("Password connot be empty")
+            return;
+        }
+
         let responseData = await axios.post("http://localhost:8080/api/signup", {
             email,
             password
@@ -48,12 +63,14 @@ export default function Signup() {
                 <div className="login-in-to">Signup In To</div>
                 <div className="label-text">Email-id</div>
                 <div className="input-text">
+                    {emailCheck && <p style={{ color: "red", fontSize: "10px" }}>{emailCheck}</p>}
                     <input
                         onChange={e => setEmail(e.target.value)}
                         type="email" placeholder="Enter your email" />
                 </div>
                 <div className="label-text">Password</div>
                 <div className="input-text">
+                    {passwordCheck && <p style={{ color: "red", fontSize: "10px" }}>{passwordCheck}</p>}
                     <input
                         onChange={e => setPassword(e.target.value)}
                         type="password" placeholder="*************" />

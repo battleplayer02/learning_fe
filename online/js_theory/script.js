@@ -172,24 +172,49 @@
 // setTimeout(cb, 5000);
 
 
-function fun() {
-    for (var i = 0; i < 5; i++) {
-        setTimeout(function () {
-            console.log(i);
-        }, 1000);
-    }
-}
-fun()
+// function fun() {
+//     for (var i = 0; i < 5; i++) {
+//         setTimeout(function () {
+//             console.log(i);
+//         }, 1000);
+//     }
+// }
+// fun()
 
-setInterval(() => {
-    console.log("hello")
-}, 1000);
+// setInterval(() => {
+//     console.log("hello")
+// }, 1000);
 
+// let a = true   // let a = 10   // let a = "hello"
+// console.log(typeof a)
+// let res = a.includes("h")
+// let res = a.split("e")
+// let res = a.substring(0,2)
+// console.log(a.length)
+// hello
+// 012
+// let res = a.replace("h", "H")
+// console.log(res)
+// let arr = [] // there is no array in js every this is an object
+// console.log(typeof arr)
+// console.log(arr)
 
+// arr.push(1); arr.push(2); arr.push(3); arr.push(4);
+// console.log(arr)
+// arr.pop()
 
+// console.log(arr)
+// let a = 10; let b = 20; let c = 30;
+// let newArr = [a, b, c]
 
-
-
+// console.log(newArr)
+// let [val1, val2, val3] = newArr
+// console.log("val 1 =", val1, "val 2  = ", val2, "val 3 =", val3);
+// let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let [value1, value2, value03, ...leftOver] = arr1 // spread operator
+// console.log(value1, value2, value03, leftOver)
+// let newarr2 = [...arr1, ...newArr]
+// console.log(newarr2)
 
 
 
