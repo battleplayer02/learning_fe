@@ -25,3 +25,5 @@ Ans: Both are comparison operators. The difference between both the operators is
 **Prototype chaining** is used to build new types of objects based on existing ones. It is similar to inheritance in a class based language. 
 
 The prototype on object instance is available through **Object.getPrototypeOf(object)** or **__proto__** property whereas prototype on constructors function is available through **Object.prototype**.
+![image](https://user-images.githubusercontent.com/42701850/149335147-12a43719-bbd4-464e-b17d-b295e8e2e8f1.png)
+
