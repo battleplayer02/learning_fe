@@ -1,0 +1,24 @@
+Server Client
+
+Client ---> request's server ---> Server 
+
+Get    ---> get a response from server
+Post   ---> update send data along with the request
+Put    ---> update send data along with the request
+Delete ---> delete 
+
+
+
+
+backend folder  ==> server (nodeJS/express)
+frontend folder ==> client (resctJS)
+
+React is a library for building user interfaces in js
+React is used for frontend
+React SPA (Single Page Application)
+There will be only one page in the application only one HTML file
+
+
+
+
+

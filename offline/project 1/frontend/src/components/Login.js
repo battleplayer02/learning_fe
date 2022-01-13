@@ -20,7 +20,7 @@ export default function Login() {
                 }
             })
             console.log(resData.data.user);
-            if (resData.data.success == 1) {
+            if (resData.data.success === 1) {
                 history("/");
             }
         }
@@ -29,16 +29,16 @@ export default function Login() {
     // login send request to server and set localStorage
     const handelClick = async e => {
         e.preventDefault()
-        if (!email.includes('@') || !email.includes('.') || email.length == 0) {
+        if (!email.includes('@') || !email.includes('.') || email.length === 0) {
             setEmailChech("Enter a valid email")
             return
         }
-        if (password.length == 0) {
+        if (password.length === 0) {
             setCheckPassword("Password connot be empty")
             return;
         }
         if (password.length < 6) {
-            setCheckPassword("Password must be at least 6 characters")
+            setCheckPassword("Password length > 6 char")
             return;
         }
         setLoading(true);
@@ -46,7 +46,7 @@ export default function Login() {
             email,
             password
         })
-        if (responseData.data.success == 1) {
+        if (responseData.data.success === 1) {
             // set localStorage login to true
             setLoading(false);
             localStorage.setItem("token", responseData.data.token);
@@ -69,7 +69,7 @@ export default function Login() {
                             <div className="login-in-to">Login In To</div>
                             <div className="label-text">Email-id</div>
                             <div className="input-text">
-                                {emailCheck && <p style={{ color: "red", fontSize: "10px" }}>{emailCheck}</p>}
+                                {emailCheck && <p style={{ color: "red", fontSize: "12px" }}>{emailCheck}</p>}
                                 <input
                                     onChange={e => setEmail(e.target.value)}
                                     type="email" placeholder="Enter your email" />
@@ -77,7 +77,7 @@ export default function Login() {
                             </div>
                             <div className="label-text">Password</div>
                             <div className="input-text">
-                                {passwordCheck && <p style={{ color: "red", fontSize: "10px" }}>{passwordCheck}</p>}
+                                {passwordCheck && <p style={{ color: "red", fontSize: "12px" }}>{passwordCheck}</p>}
                                 <input
                                     onChange={e => setPassword(e.target.value)}
                                     type="password" placeholder="*************" />

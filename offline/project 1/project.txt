@@ -14,12 +14,47 @@
 14. npm i jsonwebtoken 
 15. npm i bcrypt
 
-Login => server => token => frontend setlocalStorage
-Home => getuserFromToken goto home page / goto login page
-Logout => removeToken
+16. Login => server => token => frontend setlocalStorage
+17. Home => getuserFromToken goto home page / goto login page
+18. Logout => removeToken
 
-create a ui for product 
-create a product controller
-send the product from backend in a get request
-map the product arr in the frontend
-functionality of + - buttons in a product component
+19. create a ui for product 
+20. create a product controller
+21. send the product from backend in a get request
+22. map the product arr in the frontend
+23. functionality of + - buttons in a product component
+
+24. create a context Folder
+25. create a context file => CartContext.js'
+26. create a CartWrapper component with a state of cart and add to cart
+27. wrap the app component in the cartwrapper component
+
+1.  What are call bind and apply.
+2.  Pollyfill of bind.
+3.  Pollyfill of map filter reduce.
+4.  Pollyfill of Promise
+5.  Difference b/w == and ===.
+6.  What is localstorage.
+7.  `use strict` in js.
+8.  Code for flatten an object.
+9.  What is Curring.
+10. Difference b/w let var and const.
+11. Find freq of all the characters in a string.
+12. Difference between object and Map.
+13. What is NaN.
+14. What is event bubbeling.
+ 
+ 
+1.  What are lifecycle methods of class components.
+2.  What is virtual DOM.
+3.  What are PureComponent
+4.  What are controlled and uncontrolled components.
+5.  What is useEffect Hook.
+6.  What is useRef.
+7.  What are prpps in react.
+8.  What is clean up in useEffect.
+9.  Create a custom hook using localstorage and usestate to retain state after refresh.
+10. How to create routs in react.
+11. What is children prop.
+12. What is useHistory,history.push(), How to redirect in reach.
+13. how to use axios(understanding async await).
