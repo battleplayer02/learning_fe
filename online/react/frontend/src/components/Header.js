@@ -17,6 +17,10 @@ export default function Header() {
                         <i className="fa fa-search"></i>
                     </div>
                 </div>
+                <div className="last-items">
+                    <div className="item">Cart</div>
+                    <div className="item">Signin</div>
+                </div>
             </div>
         </div>
     )
