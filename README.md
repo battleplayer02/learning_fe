@@ -19,3 +19,9 @@ Ans: Both are comparison operators. The difference between both the operators is
 >(x == y)  // Returns true since the value of both x and y is the same
 >
 >(x === y) // Returns false since the typeof x is "number" and typeof y is "string"
+
+### What is a prototype chain
+
+**Prototype chaining** is used to build new types of objects based on existing ones. It is similar to inheritance in a class based language. 
+
+The prototype on object instance is available through **Object.getPrototypeOf(object)** or **__proto__** property whereas prototype on constructors function is available through **Object.prototype**.
