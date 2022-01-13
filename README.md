@@ -27,3 +27,56 @@ Ans: Both are comparison operators. The difference between both the operators is
 The prototype on object instance is available through **Object.getPrototypeOf(object)** or **__proto__** property whereas prototype on constructors function is available through **Object.prototype**.
 ![image](https://user-images.githubusercontent.com/42701850/149335147-12a43719-bbd4-464e-b17d-b295e8e2e8f1.png)
 
+### What is the difference between Call, Apply and Bind
+
+    The difference between Call, Apply and Bind can be explained with below examples,
+
+    **Call:** The call() method invokes a function with a given `this` value and arguments provided one by one
+
+    ```javascript
+    var employee1 = {firstName: 'John', lastName: 'Rodson'};
+    var employee2 = {firstName: 'Jimmy', lastName: 'Baily'};
+
+    function invite(greeting1, greeting2) {
+        console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
+    }
+
+    invite.call(employee1, 'Hello', 'How are you?'); // Hello John Rodson, How are you?
+    invite.call(employee2, 'Hello', 'How are you?'); // Hello Jimmy Baily, How are you?
+    ```
+
+    **Apply:** Invokes the function with a given `this` value and allows you to pass in arguments as an array
+
+    ```javascript
+    var employee1 = {firstName: 'John', lastName: 'Rodson'};
+    var employee2 = {firstName: 'Jimmy', lastName: 'Baily'};
+
+    function invite(greeting1, greeting2) {
+        console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
+    }
+
+    invite.apply(employee1, ['Hello', 'How are you?']); // Hello John Rodson, How are you?
+    invite.apply(employee2, ['Hello', 'How are you?']); // Hello Jimmy Baily, How are you?
+    ```
+
+    **bind:** returns a new function, allowing you to pass any number of arguments
+
+    ```javascript
+    var employee1 = {firstName: 'John', lastName: 'Rodson'};
+    var employee2 = {firstName: 'Jimmy', lastName: 'Baily'};
+
+    function invite(greeting1, greeting2) {
+        console.log(greeting1 + ' ' + this.firstName + ' ' + this.lastName+ ', '+ greeting2);
+    }
+
+    var inviteEmployee1 = invite.bind(employee1);
+    var inviteEmployee2 = invite.bind(employee2);
+    inviteEmployee1('Hello', 'How are you?'); // Hello John Rodson, How are you?
+    inviteEmployee2('Hello', 'How are you?'); // Hello Jimmy Baily, How are you?
+    ```
+
+    Call and apply are pretty interchangeable. Both execute the current function immediately. You need to decide whether it’s easier to send in an array or a comma separated list of arguments. You can remember by treating Call is for **comma** (separated list) and Apply is for **Array**. 
+    
+    Whereas Bind creates a new function that will have `this` set to the first parameter passed to bind().
+
+
