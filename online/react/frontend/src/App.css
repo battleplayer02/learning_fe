@@ -89,6 +89,9 @@ body {
     height: 70%;
     border-radius: 5px;
     /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .content .product .content-product{
     padding: 15px;

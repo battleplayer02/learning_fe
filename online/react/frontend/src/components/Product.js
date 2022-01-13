@@ -1,10 +1,10 @@
 import React from 'react'
-
+import image from "../images/logo512.png"
 export default function Product() {
     return (
         <div className='product'>
             <div className="header">
-                <div className="img"></div>
+                <img className="img" src={image} height="100px" width="50px"/>
             </div>
             <div className="content-product">
                 <div className="title">
