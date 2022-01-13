@@ -2,6 +2,7 @@
 
 // map 
 // polyfills writing your own map function
+// map returns ans array with modified elements by the callback function logic
 Array.prototype.myMap = function (callback) {
     // this -> pointing to the calling object
     let newArr = [];
@@ -15,11 +16,13 @@ let array = [1, 2, 3, 4, 5];
 let newDoubleArr = array.myMap(function (value) {
     return value * 2;
 });
+// let newDoubleArr1 = array.myMap(value=> value * 2);
 
 let doubleArr = array.myMap(ithval => ithval * 2);
 console.log(doubleArr);
 
 // filter
+// 
 Array.prototype.myFilter = function (callback) {
     // console.log("myFilter", this);
     let newArr = [];
@@ -39,6 +42,8 @@ let odds = arr2.myFilter(val => val % 2 == 1 ? true : false)
 // logic ? true : false
 console.log(odds);
 
+
+// find sum of elements of an array 
 // reduce 
 Array.prototype.myReduce = function (callback) {
     let result = this[0]
@@ -48,9 +53,7 @@ Array.prototype.myReduce = function (callback) {
     return result;
 }
 let redArr = [1]
-let sum = redArr.reduce(function (acc, val) {
-    return acc + val;
-})
+let sum = redArr.reduce((acc, val) => acc + val)
 console.log("sum =", sum)
 
 
@@ -90,3 +93,10 @@ let totalPrice = cart.reduce(function (acc, nextObj) {
 }, 0)
 
 console.log("total price =", totalPrice);
+
+
+let obj = {}
+
+// call bind apply
+// on object and function
+// create polyfills for call, bind, apply

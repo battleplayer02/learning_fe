@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 50px auto 50px;
+    height: 100vh;
+}
+
+
+.header {
+    background: rgb(32, 48, 64);
+}
+
+.footer {
+    background: rgb(32, 48, 64);
+}
+
+.header .header-container {
+    display: flex;
+}
