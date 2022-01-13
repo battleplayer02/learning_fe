@@ -7,12 +7,12 @@ Javascript Interview Questions: https://github.com/sudheerj/javascript-interview
 
 <br>
 
-> What is an Event Loop in Node.js?
+### What is an Event Loop in Node.js?
 
 Ans : Event loops handle asynchronous callbacks in Node.js. It is the foundation of the non-blocking input/output in Node.js, making it one of the most important environmental features.
 <br>
 
-> Difference between “ == “ and “ === “ operators.
+### Difference between “ == “ and “ === “ operators.
  
 Ans: Both are comparison operators. The difference between both the operators is that,“==” is used to compare values whereas, “ === “ is used to compare both value and types
 >var x = 2;
@@ -81,7 +81,7 @@ Call and apply are pretty interchangeable. Both execute the current function imm
 Whereas Bind creates a new function that will have `this` set to the first parameter passed to bind().
 
 
-> What is the difference between slice and splice
+### What is the difference between slice and splice
 
 ### Some of the major difference in a tabular form
 
