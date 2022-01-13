@@ -1,9 +1,15 @@
 # Resources For GJP 
 
-Node  JS Interview Questions:  https://github.com/learning-zone/nodejs-interview-questions <br>
-React JS Interview Questions:  https://github.com/sudheerj/reactjs-interview-questions <br>
-Module Exports Require :       https://www.freecodecamp.org/news/ ,https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/require-module-in-node-js-everything-about-module-require-ccccd3ad383/ <br>
-Javascript Interview Questions: https://github.com/sudheerj/javascript-interview-questions
+### Must Read Articles
+
+| Topic | Link |
+| ----------- | ----------- |
+| Node  JS Interview Questions|  https://github.com/learning-zone/nodejs-interview-questions <br>|
+| React JS Interview Questions|  https://github.com/sudheerj/reactjs-interview-questions <br>|
+| Module Exports Require |       https://www.freecodecamp.org/news/ ,https://www.freecodecamp.org/news/|requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/require-module-in-node-js-everything-about-module-require-ccccd3ad383/ <br>
+| Javascript Interview Questions| https://github.com/sudheerj/javascript-interview-questions|
+| Arrow Functions MDN|           https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions |
+
 
 <br>
 
