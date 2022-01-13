@@ -2,15 +2,15 @@
 
 ### Must Read Articles
 
-| Topic | Link |
-| ----------- | ----------- |
-| Node  JS Interview Questions|  https://github.com/learning-zone/nodejs-interview-questions <br>|
-| React JS Interview Questions|  https://github.com/sudheerj/reactjs-interview-questions <br>|
-| Module Exports Require |       https://www.freecodecamp.org/news/ ,https://www.freecodecamp.org/news/|requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/require-module-in-node-js-everything-about-module-require-ccccd3ad383/ <br>
-| Javascript Interview Questions| https://github.com/sudheerj/javascript-interview-questions|
-| Arrow Functions MDN|           https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions |
-
-
+Topic | Link |
+----------- | ----------- |
+Node  JS Interview Questions|  https://github.com/learning-zone/nodejs-interview-questions <br>|
+React JS Interview Questions|  https://github.com/sudheerj/reactjs-interview-questions <br>|
+Module Exports Require |       https://www.freecodecamp.org/news/ ,https://www.freecodecamp.org/news/|requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/require-module-in-node-js-everything-about-module-require-ccccd3ad383/ <br>
+Javascript Interview Questions| https://github.com/sudheerj/javascript-interview-questions|
+Arrow Functions MDN|           https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions |
+Classes MDN |     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+yield,yield* | https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield ,https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield*
 <br>
 
 ### What is an Event Loop in Node.js?
@@ -183,4 +183,34 @@ The above code looks like as below to the interpreter,
 var message;
 console.log(message);
 message = 'The variable Has been hoisted';
+```
+### What are classes in ES6
+
+In ES6, Javascript classes are primarily syntactic sugar over JavaScript’s existing prototype-based inheritance.
+For example, the prototype based inheritance written in function expression as below,
+
+```javascript
+function Bike(model,color) {
+    this.model = model;
+    this.color = color;
+}
+
+Bike.prototype.getDetails = function() {
+    return this.model + ' bike has' + this.color + ' color';
+};
+```
+
+Whereas ES6 classes can be defined as an alternative
+
+```javascript
+class Bike{
+    constructor(color, model) {
+    this.color= color;
+    this.model= model;
+    }
+
+    getDetails() {
+    return this.model + ' bike has' + this.color + ' color';
+    }
+}
 ```
