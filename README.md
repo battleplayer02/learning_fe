@@ -101,3 +101,18 @@ Whereas Bind creates a new function that will have `this` set to the first param
 4. A Map is an iterable and can thus be directly iterated, whereas iterating over an Object requires obtaining its keys in some fashion and iterating over them.
 5. An Object has a prototype, so there are default keys in the map that could collide with your keys if you're not careful. As of ES5 this can be bypassed by using map = Object.create(null), but this is seldom done.
 6. A Map may perform better in scenarios involving frequent addition and removal of key pairs.
+
+### What are lambda or arrow functions
+
+An arrow function is a shorter syntax for a function expression and does not have its own **this, arguments, super, or new.target**. These functions are best suited for non-method functions, and they cannot be used as constructors. 
+
+### What is a first class function
+
+In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
+
+For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable. For example, in the below example, handler functions assigned to a listener
+
+```javascript
+const handler = () => console.log ('This is a click handler function');
+document.addEventListener ('click', handler);
+```
