@@ -20,9 +20,11 @@ export default function Header() {
                 </div>
                 <div className="last-items">
                     <div className="item">Cart</div>
-                    <Link to="/signin">
-                        <div className="item">Signin</div>
-                    </Link>
+                    <div className="item">
+                        <Link to="/signin">
+                            Signin
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
