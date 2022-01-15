@@ -3,6 +3,8 @@ import data from "../data"
 import Product from "./Product"
 
 export default function Content() {
+    // data.product[5].id
+    
     return (
         <div className="content">
             {
