@@ -6,7 +6,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 50px auto 50px;
+    grid-template-rows: 60px auto 50px;
     height: 100vh;
 }
 
@@ -14,10 +14,16 @@ body {
 .header {
     background: #131921;
     /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.75); */
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .footer {
     background: #131921;
+    position: sticky;
+    bottom: 0;
+    left: 0;
 }
 
 .header .header-container {
@@ -42,15 +48,19 @@ body {
 .header .header-container .search-container .search-icon {
     color: #131921;
     background-color: #FEBD69;
-    padding: 6px;
+    padding: 10px;
     border-radius: 0 5px 5px 0px;
 }
 
 .header .header-container .search-container input {
-    width: 550px;
+    height: 25px;
+    width: 850px;
     padding: 7px;
     border: none;
     border-radius: 5px 0 0 5px;
+    padding-left: 30px !important;
+    box-sizing: border-box;
+    outline: none;
 }
 
 .header .header-container .hamburger {
@@ -81,7 +91,7 @@ body {
     padding: 5px;
     border-radius: 5px;
     margin: 0 10px;
-    color:white
+    color: white
 }
 
 
@@ -146,6 +156,7 @@ body {
 
 .logo {
     height: 90%;
+    box-sizing: border-box;
 }
 
 .img {

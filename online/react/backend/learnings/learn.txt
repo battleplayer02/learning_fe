@@ -1,0 +1,6 @@
+1. callbacks 
+2. Promises 
+3. Async/await
+
+4. File reading takes time 
+5. settimeout 

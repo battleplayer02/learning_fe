@@ -1,6 +1,18 @@
-0. Working with Switch in react router dom ?
+0.  Working with Switch in react router dom ?
+
+<Route path="/pro" component={C1} exact />
+<Route path="/product" component={C2} />
+
+404 page
+<Route path="*" component={C3} /> // C3 will act at 404 page
+
+
+
+
+
 
 1.  What are Pure Components?
+
 
 2.  Why should we not update the state directly?
 
@@ -19,16 +31,3 @@
 9.  What is the use of children prop in react
 
 10. Which is preferred option with in callback refs and findDOMNode()?
-
-
-
-
-
-
-
-
-
-
-
-
-

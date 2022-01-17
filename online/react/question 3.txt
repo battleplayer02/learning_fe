@@ -1,0 +1,8 @@
+1. How to use axios in react
+2. How to create a get, post, put, patch, delete request in express.
+3. What are Higher-Order Components?
+4. What are fragments,Why fragments are better than container divs?
+5. What are the different phases of component lifecycle?
+6. varios ways to use useEffect.
+7. Create the login page.
+8. explore JWT and bcrypt.

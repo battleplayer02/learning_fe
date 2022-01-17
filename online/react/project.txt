@@ -21,4 +21,17 @@ There will be only one page in the application only one HTML file
 
 
 
+Routing 
 
+Mounting 
+functional components useEffect Hook 
+
+useState i use to create a state variable
+
+setState your component will rerender 
+
+normal variable // will not rerender the component
+
+
+
+useEffect 
