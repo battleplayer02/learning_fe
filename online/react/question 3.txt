@@ -6,3 +6,5 @@
 6. varios ways to use useEffect.
 7. Create the login page.
 8. explore JWT and bcrypt.
+9. create promises pollyfill
+10 use of promises.all.
