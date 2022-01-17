@@ -5,6 +5,7 @@
 Topic | Link |
 ----------- | ----------- |
 |HTML/CSS| https://github.com/learning-zone/css-interview-questions|
+|SQL|https://github.com/battleplayer02/sql|
 Node  JS Interview Questions|  https://github.com/learning-zone/nodejs-interview-questions 
 React JS Interview Questions|  https://github.com/sudheerj/reactjs-interview-questions 
 Module Exports Require |       https://www.freecodecamp.org/news/require-module-in-node-js-everything-about-module-require-ccccd3ad383/ ,https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/ 
