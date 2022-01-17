@@ -25,8 +25,10 @@ Redux|https://gist.github.com/vishnu-saini/d60fdde3a59e42368b447dc2c712fdf9
 | Redux Basics | https://www.youtube.com/watch?v=poQXNp9ItL4&t=5011s |
 |Redux Thunk|https://www.freecodecamp.org/news/redux-thunk-explained-with-examples/|
 
+* Get Inspired By Some amazing portfolio websites 
+    * https://github.com/emmabostian/developer-portfolios
 
-
+    
 ### What is an Event Loop in Node.js?
 
 Ans : Event loops handle asynchronous callbacks in Node.js. It is the foundation of the non-blocking input/output in Node.js, making it one of the most important environmental features.
