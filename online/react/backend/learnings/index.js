@@ -30,7 +30,8 @@
 
 
 // bank account
-// let balance = 0;
+// let balance = 100;
+// deducts money from the balance
 // let withdraw = function (amount, err, success) {
 //     balance = balance - amount;
 //     if (balance >= 0) {
@@ -46,6 +47,7 @@
 // let success = (arg) => {
 //     console.log(arg);
 // }
+
 // withdraw(10, err, success);
 
 
@@ -71,10 +73,11 @@
 // })
 
 
+// IIFE 
 // (async () => {
 //     try {
 //         console.log("start");
-//         let ans = await withdraw(0);
+//         let ans = await withdraw(10);
 //         console.log(ans);
 //         console.log("end");
 //     } catch (error) {
@@ -82,9 +85,6 @@
 //         console.log("end");
 //     }
 // })()
-
-
-
 
 
 
