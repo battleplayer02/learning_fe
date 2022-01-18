@@ -1,10 +1,19 @@
-import React from "react"
+import React, { useEffect } from "react"
 import data from "../data"
 import Product from "./Product"
+import axios from "axios";
 
 export default function Content() {
-    // data.product[5].id
+    // const [productArr, setproductArr] = useState([])
+
+    // install axios  // npm install axios ---.>inside frontend folder
     
+    useEffect(async () => {
+        console.log("only one time when component is mounted")
+        // let responseData = await axios.get("http://localhost:8080/data")
+        // console.log(responseData.data);
+    }, []);
+
     return (
         <div className="content">
             {
