@@ -187,7 +187,7 @@ body {
 .content .form-wrapper .inner-form-wrapper {
     font-family: "Amazon Ember", Arial, sans-serif;
     padding: 25px;
-    border: 1px solid grey;
+    border: 1px solid #e7e7e7;
     border-radius: 3px;
     box-sizing: border-box;
     font-size: 0.8rem;

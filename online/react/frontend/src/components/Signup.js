@@ -26,7 +26,7 @@ export default function Signup() {
         } else {
             setPasswordCheck(false)
         }
-        let responceData = await axios.post("http://localhost:8080/api/login", {
+        let responceData = await axios.post("http://localhost:8080/api/signup", {
             username: email,
             password
         })
@@ -48,7 +48,7 @@ export default function Signup() {
                 </div>}
                 <div className="inner-form-wrapper">
                     <div className="form-ele signin">
-                        <label className='signin'>Sign-In</label>
+                        <label className='signin'>Create Account</label>
                         <hr />
                     </div>
                     <div className="form-ele" >
@@ -56,10 +56,7 @@ export default function Signup() {
                         <input type="text" onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className="form-ele">
-                        <div className="fgt-pw-container">
-                            <label>Password</label>
-                            <label className='fgt-pw'>Forget Password</label>
-                        </div>
+                        <label>Password</label>
                         <input type="password" onChange={(e) => setPassword(e.target.value)} />
                     </div>
                     <div className="form-ele">
@@ -83,3 +80,4 @@ export default function Signup() {
         </div>
     )
 }
+
