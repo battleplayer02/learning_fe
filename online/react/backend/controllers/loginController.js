@@ -11,7 +11,7 @@ loginRouter.post("/login", async (req, res) => {
         let pwCompare = await bcrypt.compare(password, result.password);
         console.log("pwCompare: ", pwCompare);
         console.log("result.password: ", result.password);
-        let token = jwt.sign({ username, password }, SECRET, { expiresIn: "1h" });
+        let token = jwt.sign({ username, password }, SECRET, { expiresIn: "24h" });
         if (pwCompare) {
             res.json({
                 success: 1,
