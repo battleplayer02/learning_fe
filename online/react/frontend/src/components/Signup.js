@@ -8,6 +8,8 @@ export default function Signup() {
     const [password, setPassword] = useState('')
     const [emailCheck, setEmailCheck] = useState(false)
     const [passowrdCheck, setPasswordCheck] = useState(false)
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [confirmPasswordCheck, setConfirmPasswordCheck] = useState(false)
     const [error, setError] = useState(false)
 
     const handelLogin = async () => {
@@ -18,7 +20,14 @@ export default function Signup() {
             setEmailCheck("Enter correct email")
             return;
         } else {
-            setEmailCheck(false)
+            setEmailCheck(false);
+        }
+        if (password !== confirmPassword) {
+            setConfirmPasswordCheck("Password doesn't match");
+            return;
+        }
+        else {
+            setConfirmPasswordCheck(false);
         }
         if (password.length < 6) {
             setPasswordCheck("Password length must be greater than 6")
@@ -53,11 +62,15 @@ export default function Signup() {
                     </div>
                     <div className="form-ele" >
                         <label>Email or mobile phone number</label>
-                        <input type="text" onChange={(e) => setEmail(e.target.value)} />
+                        <input type="text" onChange={(e) => setEmail(e.target.value)} value={email} />
                     </div>
                     <div className="form-ele">
                         <label>Password</label>
-                        <input type="password" onChange={(e) => setPassword(e.target.value)} />
+                        <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} />
+                    </div>
+                    <div className="form-ele">
+                        <label>Confirm Password</label>
+                        <input type="password" onChange={(e) => setConfirmPassword(e.target.value)} value={confirmPassword} />
                     </div>
                     <div className="form-ele">
                         By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.
@@ -66,6 +79,7 @@ export default function Signup() {
                     <div style={{ color: "red" }}>
                         {emailCheck && <span>{emailCheck}</span>}
                         {passowrdCheck && <span>{passowrdCheck}</span>}
+                        {confirmPasswordCheck && <span>{confirmPasswordCheck}</span>}
                     </div>
                     <div className="form-ele">
                         <button onClick={handelLogin} className="login-btn">Create Account</button>
