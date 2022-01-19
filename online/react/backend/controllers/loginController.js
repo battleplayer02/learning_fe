@@ -1,8 +1,8 @@
 let loginRouter = require("express").Router();
 let db = [
     {
-        username: "admin",
-        password: "admin"
+        username: "admin@admin.com",
+        password: "1234567"
     },
     {
         username: "user",
@@ -22,6 +22,7 @@ loginRouter.post("/login", (req, res) => {
         })
     }
 })
+
 loginRouter.post("/signup", (req, res) => {
     let { username, password } = req.body;
     db.push({

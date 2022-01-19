@@ -1,8 +1,8 @@
 const data = require('./data.js');
 const express = require("express");
 let app = express();
-const loginRouter = require("./controllers/loginController.js")
-const allowOrigin = require("./middlewares/allowOrigin.js")
+const loginRouter = require("./controllers/loginController.js");
+const allowOrigin = require('./middlewares/allowOrigin.js');
 
 // allow cors 
 app.use(allowOrigin);
@@ -19,7 +19,9 @@ app.get("/", (req, res) => {
 app.use("/api", loginRouter);
 
 app.get("/data", (req, res) => {
-    res.json(data);
+    setTimeout(() => {
+        res.json(data);
+    }, 2000);
 })
 
 app.listen(8080, () => {

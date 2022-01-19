@@ -175,3 +175,86 @@ body {
     justify-content: center;
     color: white
 }
+
+.form-wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content .form-wrapper .inner-form-wrapper {
+    font-family: "Amazon Ember", Arial, sans-serif;
+    padding: 25px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+    width: 75%;
+}
+
+.form-ele {
+    width: 100%;
+}
+
+.content .form-wrapper .form-ele input:focus {
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+
+.content .form-wrapper .form-ele input {
+    width: 100%;
+    background-color: #fff;
+    padding: 5px 7px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #ccc;
+    line-height: normal;
+}
+
+.content .form-wrapper .form-ele {
+    margin: 15px 0;
+}
+
+.content .form-wrapper .form-ele label {
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+
+.content .form-wrapper .form-ele.signin {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.content .form-wrapper .form-ele .login-btn {
+    box-shadow: 0 1px 0 rgb(255 255 255 / 40%) inset;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+hr {
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.fgt-pw-container {
+    display: flex;
+    height: 18px;
+}
+
+.fgt-pw {
+    color: rgb(26, 130, 172);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+}

@@ -1,45 +1,69 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+
 export default function Signin() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    // v1
-    useEffect(() => {
-        console.log("har bar render to chalega");
-    })
-    // v2
-    useEffect(() => {
-        console.log("yeh ek bar chalega ");
-    }, [])
-    // v3
-    useEffect(() => {
-        console.log("yeh email k change hone pe chalega");
-    }, [email]);
-    // v4 
-    useEffect(() => {
-        return () => {
-            console.log("yeh component unmount hone pe chalega");
-        }
-    }, [])
+    const [emailCheck, setEmailCheck] = useState(false)
+    const [passowrdCheck, setPasswordCheck] = useState(false)
 
-    const handelLogin = (e) => {
+    const handelLogin = async (e) => {
         e.preventDefault();
         console.log('email: ', email)
         console.log('password: ', password)
+        if (!email.includes('@') || !email.includes('.')) {
+            setEmailCheck("Enter correct email")
+            return;
+        } else {
+            setEmailCheck(false)
+        }
+        if (password.length < 6) {
+            setPasswordCheck("Password length must be greater than 6")
+            return;
+        } else {
+            setPasswordCheck(false)
+        }
+        let responceData = await axios.post("http://localhost:8080/api/login", {
+            username: email,
+            password
+        })
+        console.log("responceData: ", responceData.data);
     }
+
+    console.log('email: ', email)
+    console.log('password: ', password)
+
     return (
-        <div className='content'>
+        <div className='content' style={{ alignItems: "start" }}>
             <div className='form-wrapper'>
-                <div className="form-ele" >
-                    Login
-                </div>
-                <div className="form-ele" >
-                    <input type="text" onChange={(e) => setEmail(e.target.value)} />
-                </div>
-                <div className="form-ele" >
-                    <input type="password" onChange={(e) => setPassword(e.target.value)} />
-                </div>
-                <div className="form-ele">
-                    <button onClick={handelLogin}>Login</button>
+                <img src="/images/logo/logo-white.png" alt="not found" style={{ marginLeft: "auto", marginRight: "auto" }} height="66" width="184" />
+                <div className="inner-form-wrapper">
+                    <div className="form-ele signin">
+                        <label className='signin'>Sign-In</label>
+                        <hr />
+                    </div>
+                    <div className="form-ele" >
+                        <label>Email or mobile phone number</label>
+                        <input type="text" onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className="form-ele">
+                        <div className="fgt-pw-container">
+                            <label>Password</label>
+                            <label className='fgt-pw'>Forget Password</label>
+                        </div>
+                        <input type="password" onChange={(e) => setPassword(e.target.value)} />
+                    </div>
+                    <div className="form-ele">
+                        By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.
+                        <br /> Need help?
+                    </div>
+                    <div style={{ color: "red" }}>
+                        {emailCheck && <span>{emailCheck}</span>}
+                        {passowrdCheck && <span>{passowrdCheck}</span>}
+                    </div>
+                    <div className="form-ele">
+                        <button onClick={handelLogin} className="login-btn">Login</button>
+                    </div>
                 </div>
             </div>
         </div>
