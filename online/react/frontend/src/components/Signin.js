@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom"
 
 export default function Signin() {
+    const navigate = useNavigate()
+
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [emailCheck, setEmailCheck] = useState(false)
     const [passowrdCheck, setPasswordCheck] = useState(false)
+    const [error, setError] = useState(false)
 
     const handelLogin = async (e) => {
         e.preventDefault();
@@ -27,16 +32,22 @@ export default function Signin() {
             username: email,
             password
         })
-        console.log("responceData: ", responceData.data);
+        console.log("responceData: ", responceData);
+        if (responceData.data.success == 1) {
+            // redirect to the home page
+            navigate("/");
+        } else {
+            setError(true)
+        }
     }
-
-    console.log('email: ', email)
-    console.log('password: ', password)
 
     return (
         <div className='content' style={{ alignItems: "start" }}>
             <div className='form-wrapper'>
                 <img src="/images/logo/logo-white.png" alt="not found" style={{ marginLeft: "auto", marginRight: "auto" }} height="66" width="184" />
+                {error && <div style={{ color: "red", border: "1px solid red" }}>
+                    Your Email or password is incorrect.
+                </div>}
                 <div className="inner-form-wrapper">
                     <div className="form-ele signin">
                         <label className='signin'>Sign-In</label>
