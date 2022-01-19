@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom"
 
-export default function Signin() {
+export default function Signup() {
     const navigate = useNavigate();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -71,11 +71,11 @@ export default function Signin() {
                         {passowrdCheck && <span>{passowrdCheck}</span>}
                     </div>
                     <div className="form-ele">
-                        <button onClick={handelLogin} className="login-btn">Login</button>
+                        <button onClick={handelLogin} className="login-btn">Create Account</button>
                     </div>
                     <div className="form-ele">
-                        <Link to="/signup">
-                            <button className="create-acc-btn">Create Account</button>
+                        <Link to="/signin">
+                            Already have an account? Sign in
                         </Link>
                     </div>
                 </div>

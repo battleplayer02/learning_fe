@@ -237,6 +237,14 @@ body {
     width: 100%;
 }
 
+.content .form-wrapper .form-ele .create-acc-btn {
+    box-shadow: 0 1px 0 rgb(255 255 255 / 40%) inset;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 7px;
+    width: 100%;
+}
+
 hr {
     background-color: transparent;
     display: block;

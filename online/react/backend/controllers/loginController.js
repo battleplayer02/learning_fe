@@ -6,7 +6,7 @@ loginRouter.post("/login", async (req, res) => {
     let { username, password } = req.body;
     let result = db.find(user => user.username === username);
     if (result) {
-        let pwCompare = await bcrypt.compare(password, result.password,);
+        let pwCompare = await bcrypt.compare(password, result.password);
         console.log("pwCompare: ", pwCompare);
         console.log("result.password: ", result.password);
         if (pwCompare) {
@@ -30,11 +30,7 @@ loginRouter.post("/login", async (req, res) => {
 
 loginRouter.post("/signup", async (req, res) => {
     let { username, password } = req.body;
-
     password = await bcrypt.hash(password, 10);
-    // himanshu@gmail.com
-    // 123456 ====> 65468d654684dfa68dsfg7ad84gsd6f84g68sd4fg !=== 123456 
-
     db.push({
         username,
         password
