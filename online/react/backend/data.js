@@ -2,7 +2,7 @@ const data = {
     products: [
         {
             _id: '1',
-            name: 'Nike Slim Shirt',
+            name: 'Shirt',
             category: 'Shirts',
             image: '/images/p1.jpg',
             price: 120,
@@ -74,4 +74,5 @@ const data = {
         },
     ],
 };
-export default data;
+
+module.exports = data;

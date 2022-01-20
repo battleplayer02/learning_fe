@@ -1,0 +1,21 @@
+11 Why virtual dom update is faster than the traditional HTMLDom
+
+12 What are controlled and uncontrolled component
+
+13 What is the difference between createElement and cloneElement?
+
+14 What are the different phases of component lifecycle?
+
+15 What are Higher-Order Components?
+
+16 What is the purpose of using super constructor with props argument?
+
+17 Why React uses className over class attribute?
+
+18 What are fragments,Why fragments are better than container divs?
+
+19 What are portals in React?
+
+20 What are the advantages and disadvantages of React?
+
+
