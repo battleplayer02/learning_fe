@@ -4,6 +4,7 @@ let app = express();
 const loginRouter = require("./controllers/loginController.js");
 const allowOrigin = require('./middlewares/allowOrigin.js');
 const productRouter = require('./controllers/productController.js');
+const verifyToken = require('./middlewares/verifyToken.js');
 
 // allow cors 
 app.use(allowOrigin);
@@ -16,19 +17,20 @@ app.get("/", (req, res) => {
     });
 })
 
-// routes
+/*******************routes************/
 
-/*  Login */ 
+/*  Login */
 app.use("/api", loginRouter);
 
 /* Products */
-app.use("/api/product",productRouter);
+app.use("/api/product", verifyToken, productRouter);
 
 app.get("/data", (req, res) => {
     setTimeout(() => {
         res.json(data);
     }, 2000);
 })
+/****************end routes************/
 
 app.listen(8080, () => {
     console.log("Server is running on port 8080");

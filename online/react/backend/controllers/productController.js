@@ -1,9 +1,10 @@
 const data = require("../data");
 let productRouter = require("express").Router();
 
-
 productRouter.get("/:id", (req, res) => {
     let { id } = req.params;
+    let decoded = req.decoded;
+    console.log("decoded: ", decoded);
     let product = data.products.find(ele => ele._id === id);
     if (product) {
         res.json({
