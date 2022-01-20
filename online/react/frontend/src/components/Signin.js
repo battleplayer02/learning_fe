@@ -43,9 +43,12 @@ export default function Signin() {
         <div className='content' style={{ alignItems: "start" }}>
             <div className='form-wrapper'>
                 <img src="/images/logo/logo-white.png" alt="not found" style={{ marginLeft: "auto", marginRight: "auto" }} height="66" width="184" />
-                {error && <div style={{ color: "red", border: "1px solid red" }}>
-                    {error}
-                </div>}
+                {
+                    error &&
+                    <div className='error'>
+                        <i className='fas fa-exclamation-triangle'></i>&nbsp;&nbsp;{error}
+                    </div>
+                }
                 <div className="inner-form-wrapper">
                     <div className="form-ele signin">
                         <label className='signin'>Sign-In</label>

@@ -3,6 +3,7 @@ const express = require("express");
 let app = express();
 const loginRouter = require("./controllers/loginController.js");
 const allowOrigin = require('./middlewares/allowOrigin.js');
+const productRouter = require('./controllers/productController.js');
 
 // allow cors 
 app.use(allowOrigin);
@@ -16,7 +17,12 @@ app.get("/", (req, res) => {
 })
 
 // routes
+
+/*  Login */ 
 app.use("/api", loginRouter);
+
+/* Products */
+app.use("/api/product",productRouter);
 
 app.get("/data", (req, res) => {
     setTimeout(() => {

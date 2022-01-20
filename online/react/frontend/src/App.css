@@ -50,13 +50,18 @@ body, html {
     padding: 2px;
     box-sizing: border-box;
     padding: 1px;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .header .header-container .search-container .search-icon {
     color: #131921;
     background-color: #FEBD69;
-    padding: 10px;
+    /* padding: 10px; */
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0 5px 5px 0px;
 }
 
@@ -67,8 +72,10 @@ body, html {
     border: none;
     border-radius: 5px 0 0 5px;
     padding-left: 30px !important;
+    height: 40px;
     box-sizing: border-box;
     outline: none;
+    font-size: 1.2rem;
 }
 
 
@@ -130,9 +137,11 @@ body, html {
 .under-header .uh-container .uh-img:hover {
     outline: 2px solid white;
 }
-.uh-img{
+
+.uh-img {
     margin-left: auto;
 }
+
 .uh-img img {
 
     height: 35px;
@@ -155,6 +164,7 @@ body, html {
     overflow: auto;
     padding: 5px;
     box-sizing: border-box;
+    padding-bottom: 30px;
 }
 
 .content .product {
@@ -170,10 +180,11 @@ body, html {
     overflow: hidden;
 }
 
-.content .product img{
+.content .product img {
     transition: all 100ms ease;
 }
-.content .product:hover img{
+
+.content .product:hover img {
     transform: scale(1.1);
 }
 
@@ -326,4 +337,31 @@ hr {
     color: rgb(26, 130, 172);
     font-family: Arial, Helvetica, sans-serif;
     margin-left: auto;
+}
+
+
+
+.error {
+    animation: grow 200ms ease;
+    outline: 1px solid red;
+    border-radius: 3px;
+    box-sizing: border-box;
+    /* font-size: 1.2rem; */
+    width: 75%;
+    color: red;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: red 0px 0px 3px 0px;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
