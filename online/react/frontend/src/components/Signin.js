@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom"
+import UserContext from '../context/ContextCreator';
 
 export default function Signin() {
+    const { setUser } = useContext(UserContext) // to use the context you use useContext hook
+
     const navigate = useNavigate();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [emailCheck, setEmailCheck] = useState(false)
     const [passowrdCheck, setPasswordCheck] = useState(false)
     const [error, setError] = useState(false)
+
 
     const handelLogin = async () => {
         // e.preventDefault();
@@ -33,6 +37,8 @@ export default function Signin() {
         console.log("responceData: ", responceData);
         if (responceData.data.success == 1) {
             // redirect to the home page
+            setUser(responceData.data);
+            console.log(responceData.data);
             navigate("/");
         } else {
             setError(responceData.data.message)

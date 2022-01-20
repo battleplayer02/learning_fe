@@ -30,8 +30,12 @@ app.get("/data", (req, res) => {
         res.json(data);
     }, 2000);
 })
+
 /****************end routes************/
 
+
+
+/* Listening to 8080  */
 app.listen(8080, () => {
     console.log("Server is running on port 8080");
 })
