@@ -5,7 +5,7 @@ export default UserContext;
 
 
 // react context ==>>> createContext ---> creates a context
-// Provider wrap everything to get the access 
+// Provider wrap everything to get the access
 // react context ==>>> useContext    ---> use the context
 
 

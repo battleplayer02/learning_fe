@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import Product from "./Product"
 import axios from "axios";
+import UserContext from "../context/ContextCreator";
+import FilterContext from "../context/FilterContext";
 
 export default function Content() {
-    const [productArr, setproductArr] = useState([])
+    const { productArr, setproductArr } = useContext(UserContext);
+    const { filter } = useContext(FilterContext);
 
     // install axios  // npm install axios ---.>inside frontend folder
 
@@ -14,21 +17,25 @@ export default function Content() {
         setproductArr(responseData.data.products)
     }, []);
 
+    // map filter reduce 
+    let newArr = productArr
+        .filter(product => product.name.toLowerCase().includes(filter.search.toLowerCase()));
     return (
         <div className="content">
             {
                 productArr.length == 0 ?
                     "Loading...." :
-                    productArr.map(product =>
-                        <Product
-                            key={product._id}
-                            name={product.name}
-                            category={product.category}
-                            brand={product.brand}
-                            price={product.price}
-                            image={product.image}
-                        />
-                    )
+                    newArr.length == 0 ? "No Products Found..."
+                        : newArr.map(product =>
+                            <Product
+                                key={product._id}
+                                name={product.name}
+                                category={product.category}
+                                brand={product.brand}
+                                price={product.price}
+                                image={product.image}
+                            />
+                        )
             }
         </div>
     )

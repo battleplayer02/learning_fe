@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import UserContext from "../context/ContextCreator";
+import SearchBar from "./SearchBar";
 
 
 export default function Header() {
@@ -13,7 +14,7 @@ export default function Header() {
                     <img src="images\logo\logo.png" />
                 </Link>
                 <div className="search-container">
-                    <input type="text" placeholder="Search Your Product" />
+                    <SearchBar />
                     <div className="search-icon">
                         <i className="fa fa-search"></i>
                     </div>
