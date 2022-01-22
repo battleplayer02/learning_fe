@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import UserContext from "../context/ContextCreator";
+import Cart from "./Cart";
 import SearchBar from "./SearchBar";
 
 
@@ -20,7 +21,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="last-items">
-                    <div className="item">Cart</div>
+                    <Cart />
                     <div className="item">
                         {
                             user == null ?

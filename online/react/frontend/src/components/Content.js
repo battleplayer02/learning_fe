@@ -6,9 +6,8 @@ import FilterContext from "../context/FilterContext";
 
 export default function Content() {
     const { productArr, setproductArr } = useContext(UserContext);
-    const { filter } = useContext(FilterContext);
-
-    // install axios  // npm install axios ---.>inside frontend folder
+    const { filter: { search } } = useContext(FilterContext);
+    //filter{search}
 
     useEffect(async () => {
         console.log("only one time when component is mounted")
@@ -17,9 +16,10 @@ export default function Content() {
         setproductArr(responseData.data.products)
     }, []);
 
-    // map filter reduce 
+
     let newArr = productArr
-        .filter(product => product.name.toLowerCase().includes(filter.search.toLowerCase()));
+        .filter(product => product.name.toLowerCase().includes(search.toLowerCase()));
+
     return (
         <div className="content">
             {
@@ -28,12 +28,14 @@ export default function Content() {
                     newArr.length == 0 ? "No Products Found..."
                         : newArr.map(product =>
                             <Product
+                                id={product._id}
                                 key={product._id}
                                 name={product.name}
                                 category={product.category}
                                 brand={product.brand}
                                 price={product.price}
                                 image={product.image}
+                                countInStock={product.countInStock}
                             />
                         )
             }
