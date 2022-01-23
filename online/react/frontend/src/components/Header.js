@@ -1,6 +1,13 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "react-router-dom"
+import UserContext from "../context/ContextCreator";
+import Cart from "./Cart";
+import SearchBar from "./SearchBar";
+
+
 export default function Header() {
+    let { user } = useContext(UserContext);
+
     return (
         <div className="header">
             <div className="header-container">
@@ -8,17 +15,21 @@ export default function Header() {
                     <img src="images\logo\logo.png" />
                 </Link>
                 <div className="search-container">
-                    <input type="text" placeholder="Search Your Product" />
+                    <SearchBar />
                     <div className="search-icon">
                         <i className="fa fa-search"></i>
                     </div>
                 </div>
                 <div className="last-items">
-                    <div className="item">Cart</div>
+                    <Cart />
                     <div className="item">
-                        <Link to="/signin">
-                            Signin
-                        </Link>
+                        {
+                            user == null ?
+                                <Link to="/signin">
+                                    Signin
+                                </Link>
+                                : user.username
+                        }
                     </div>
                 </div>
             </div>

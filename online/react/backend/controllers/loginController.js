@@ -3,7 +3,6 @@ let bcrypt = require("bcryptjs");
 let jwt = require("jsonwebtoken");
 const { SECRET } = require("../utils/SECRET");
 let db = [];
-
 loginRouter.post("/login", async (req, res) => {
     let { username, password } = req.body;
     let result = db.find(user => user.username === username);
@@ -16,6 +15,7 @@ loginRouter.post("/login", async (req, res) => {
             res.json({
                 success: 1,
                 token,
+                username,
                 message: "Login Successful",
             })
         } else {

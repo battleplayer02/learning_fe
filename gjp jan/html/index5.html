@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            height: 400px;
+            width: 400px;
+            background-color: #ccc;
+            box-sizing: border-box;
+            position: relative;
+            top: 100px;
+            /* padding: 200px; */
+        }
+
+        .parent div {
+            height: 40px;
+            width: 40px;
+        }
+
+        #div-1 {
+            background-color: #f4f4f4;
+            /* position: relative;
+            top: 40px;
+            left: 40px; */
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #div-2 {
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        #div-3 {
+            background-color: skyblue;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        #div-4 {
+            background-color: tomato;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /*
+            position: sticky;
+            position: fixed;
+        */
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div id="div-1">1</div>
+        <div id="div-2">2</div>
+        <div id="div-3">3</div>
+        <div id="div-4">4</div>
+    </div>
+</body>
+
+</html>

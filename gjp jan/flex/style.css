@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;    
+}
+
+.parent {
+    background-color: red;
+    font-size: 2rem;
+    display: flex;
+}
+
+
+
+.it-2{
+    margin-left: auto;
+    margin-right: auto;
+}
+

@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import Product from "./Product"
 import axios from "axios";
+import UserContext from "../context/ContextCreator";
+import FilterContext from "../context/FilterContext";
 
 export default function Content() {
-    const [productArr, setproductArr] = useState([])
-
-    // install axios  // npm install axios ---.>inside frontend folder
+    const { productArr, setproductArr } = useContext(UserContext);
+    const { filter: { search } } = useContext(FilterContext);
+    //filter{search}
 
     useEffect(async () => {
         console.log("only one time when component is mounted")
@@ -14,21 +16,28 @@ export default function Content() {
         setproductArr(responseData.data.products)
     }, []);
 
+
+    let newArr = productArr
+        .filter(product => product.name.toLowerCase().includes(search.toLowerCase()));
+
     return (
         <div className="content">
             {
                 productArr.length == 0 ?
                     "Loading...." :
-                    productArr.map(product =>
-                        <Product
-                            key={product._id}
-                            name={product.name}
-                            category={product.category}
-                            brand={product.brand}
-                            price={product.price}
-                            image={product.image}
-                        />
-                    )
+                    newArr.length == 0 ? "No Products Found..."
+                        : newArr.map(product =>
+                            <Product
+                                id={product._id}
+                                key={product._id}
+                                name={product.name}
+                                category={product.category}
+                                brand={product.brand}
+                                price={product.price}
+                                image={product.image}
+                                countInStock={product.countInStock}
+                            />
+                        )
             }
         </div>
     )

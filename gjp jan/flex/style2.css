@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif
+}
+
+header{
+    display: flex;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+header .dev{
+    margin-right: auto;
+}
+
+header .item{
+    padding: 0 20px;
+}
+
+img{
+    padding: 10px 20px;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.cards img{
+    border-radius: 50%;
+}
+
+footer{
+    height: 60px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+     justify-content: center;
+    font-size: larger;
+    margin-top: 40px;
+}

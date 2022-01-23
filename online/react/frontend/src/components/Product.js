@@ -1,5 +1,12 @@
-import React from 'react'
-export default function Product({ name, category, brand, price, image }) {
+import React, { useContext } from 'react'
+import CartContext from '../context/CartContext'
+export default function Product({ id, name, category, brand, price, image, countInStock }) {
+    let { addToCart } = useContext(CartContext)
+    function handelClick() {
+        addToCart(id, name, price, image, category, brand, countInStock) //sum(1,2)
+    }
+    //function addToCart(id, name, price, image, category, brand, countInStock) {
+
     return (
         <div className='product'>
             <div className="product-header">
@@ -21,7 +28,7 @@ export default function Product({ name, category, brand, price, image }) {
                             <span>{price}</span>
                         </div>
                         <div className="btn">
-                            <button>Add To Cart</button>
+                            <button onClick={handelClick}>Add To Cart</button>
                         </div>
                     </div>
                 </div>
