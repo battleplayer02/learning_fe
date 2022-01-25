@@ -7,6 +7,7 @@ import FilterContext from "../context/FilterContext";
 export default function Content() {
     const { productArr, setproductArr } = useContext(UserContext);
     const { filter: { search } } = useContext(FilterContext);
+    const { filter: { category } } = useContext(FilterContext);
     //filter{search}
 
     useEffect(async () => {
@@ -20,13 +21,15 @@ export default function Content() {
     let newArr = productArr
         .filter(product => product.name.toLowerCase().includes(search.toLowerCase()));
 
+    let newArrFilterCategory = newArr.filter(product => product.category.includes(category));
+    
     return (
         <div className="content">
             {
                 productArr.length == 0 ?
                     "Loading...." :
-                    newArr.length == 0 ? "No Products Found..."
-                        : newArr.map(product =>
+                    newArrFilterCategory.length == 0 ? "No Products Found..."
+                        : newArrFilterCategory.map(product =>
                             <Product
                                 id={product._id}
                                 key={product._id}

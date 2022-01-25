@@ -1,12 +1,18 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import UserContext from "../context/ContextCreator";
+import SideBarContext from "../context/SideBarContext";
 import Cart from "./Cart";
 import SearchBar from "./SearchBar";
 
 
 export default function Header() {
     let { user } = useContext(UserContext);
+    const { setOpen } = useContext(SideBarContext);
+
+    function openSidebar() {
+        setOpen(true);
+    }
 
     return (
         <div className="header">
@@ -21,7 +27,9 @@ export default function Header() {
                     </div>
                 </div>
                 <div className="last-items">
-                    <Cart />
+                    <Link to="/cart">
+                        <Cart />
+                    </Link>
                     <div className="item">
                         {
                             user == null ?
@@ -35,13 +43,14 @@ export default function Header() {
             </div>
             <div className="under-header">
                 <div className="uh-container">
-                    <div className="uh-item flex">
+                    <div className="uh-item flex" onClick={openSidebar}>
                         <div className="hamburger">
                             <div className="line"></div>
                             <div className="line"></div>
                             <div className="line"></div>
                         </div>
-                        All</div>
+                        All
+                    </div>
                     <div className="uh-item">Fresh</div>
                     <div className="uh-item">Cupons</div>
                     <div className="uh-item">Fashion</div>
