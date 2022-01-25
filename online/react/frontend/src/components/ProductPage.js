@@ -17,6 +17,7 @@ export default function ProductPage() {
                 "Authorization": `${user.token}`
             }
         })
+        
         console.log(reponceData.data.product);
         setProduct(reponceData.data.product)
         // console.log(productData)
