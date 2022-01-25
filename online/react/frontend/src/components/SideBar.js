@@ -2,12 +2,9 @@ import React, { useContext } from 'react';
 import FilterContext from '../context/FilterContext';
 import SideBarContext from '../context/SideBarContext';
 import styles from "../Sidebar.module.css";
-
-
 export default function SideBar() {
     const { open, setOpen } = useContext(SideBarContext);
     const { filter, setFilter } = useContext(FilterContext);
-
     if (open) {
         return (<div className={styles.main__sidebar}>
             <div className={styles.sidebar}>

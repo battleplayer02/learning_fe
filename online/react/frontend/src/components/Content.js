@@ -3,6 +3,7 @@ import Product from "./Product"
 import axios from "axios";
 import UserContext from "../context/ContextCreator";
 import FilterContext from "../context/FilterContext";
+import MyImageSlider from "./MyImageSlider";
 
 export default function Content() {
     const { productArr, setproductArr } = useContext(UserContext);
@@ -22,26 +23,31 @@ export default function Content() {
         .filter(product => product.name.toLowerCase().includes(search.toLowerCase()));
 
     let newArrFilterCategory = newArr.filter(product => product.category.includes(category));
-    
+
     return (
-        <div className="content">
-            {
-                productArr.length == 0 ?
-                    "Loading...." :
-                    newArrFilterCategory.length == 0 ? "No Products Found..."
-                        : newArrFilterCategory.map(product =>
-                            <Product
-                                id={product._id}
-                                key={product._id}
-                                name={product.name}
-                                category={product.category}
-                                brand={product.brand}
-                                price={product.price}
-                                image={product.image}
-                                countInStock={product.countInStock}
-                            />
-                        )
-            }
+        <div style={{ overflow: "auto" }}>
+            <MyImageSlider />
+            <div style={{position:"relative",top:"-300px"}}>
+                <div className="content">
+                    {
+                        productArr.length == 0 ?
+                            "Loading...." :
+                            newArrFilterCategory.length == 0 ? "No Products Found..."
+                                : newArrFilterCategory.map(product =>
+                                    <Product
+                                        id={product._id}
+                                        key={product._id}
+                                        name={product.name}
+                                        category={product.category}
+                                        brand={product.brand}
+                                        price={product.price}
+                                        image={product.image}
+                                        countInStock={product.countInStock}
+                                    />
+                                )
+                    }
+                </div>
+            </div>
         </div>
     )
 }

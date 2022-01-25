@@ -12,11 +12,6 @@ export default function ContextWrapper({ children }) {
         search: "",
         category: "",
     });
-
-    // function sum(a, b) {
-    //     return a + b;
-    // }
-    // sum(1, 2);
     const [cart, setCart] = useState([])
     function addToCart(id, name, price, image, category, brand, countInStock) {
         if (countInStock == 0) return;

@@ -1,14 +1,23 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { Link } from "react-router-dom"
 import UserContext from "../context/ContextCreator";
 import SideBarContext from "../context/SideBarContext";
 import Cart from "./Cart";
+import Logout from "./Logout";
 import SearchBar from "./SearchBar";
 
 
 export default function Header() {
-    let { user } = useContext(UserContext);
+    let { user, setUser } = useContext(UserContext);
     const { setOpen } = useContext(SideBarContext);
+
+    useEffect(() => {
+        if (localStorage.getItem("user")) {
+            let userData = JSON.parse(localStorage.getItem("user"));
+            console.log(userData.username);
+            setUser(userData);
+        }
+    }, [])
 
     function openSidebar() {
         setOpen(true);
@@ -39,6 +48,9 @@ export default function Header() {
                                 : user.username
                         }
                     </div>
+                    {
+                        user !== null ? <Logout /> : null
+                    }
                 </div>
             </div>
             <div className="under-header">

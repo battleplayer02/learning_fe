@@ -4,6 +4,7 @@ import CartPage from "./components/CartPage";
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import MyImageSlider from "./components/MyImageSlider";
 import ProductPage from "./components/ProductPage";
 import SideBar from "./components/SideBar";
 import Signin from './components/Signin';

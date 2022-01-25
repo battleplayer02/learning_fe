@@ -39,6 +39,7 @@ export default function Signin() {
             // redirect to the home page
             setUser(responceData.data);
             console.log(responceData.data);
+            localStorage.setItem('user', JSON.stringify(responceData.data));
             navigate("/");
         } else {
             setError(responceData.data.message)
