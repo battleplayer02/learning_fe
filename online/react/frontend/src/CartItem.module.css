@@ -1,0 +1,20 @@
+.cartItem {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 100px;
+    outline: 1px solid #bbb;
+    border-radius: 10px;
+}
+
+.name{
+    width: 200px;
+}
+
+.img {
+    height: 50px;
+    width: 50px;
+    background-color: burlywood;
+}

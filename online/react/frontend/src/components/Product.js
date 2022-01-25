@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import CartContext from '../context/CartContext'
 export default function Product({ id, name, category, brand, price, image, countInStock }) {
     let { addToCart } = useContext(CartContext)
@@ -17,7 +18,9 @@ export default function Product({ id, name, category, brand, price, image, count
                 <div className="title">
                     <div className='details'>
                         <h3>
-                            {name}
+                            <Link to={`/product/${id}`}>
+                                {name}
+                            </Link>
                         </h3>
                         <div>Category : {category}</div>
                         <div>Barand: {brand}</div>

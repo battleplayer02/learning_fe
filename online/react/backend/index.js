@@ -28,7 +28,7 @@ app.use("/api/product", verifyToken, productRouter);
 app.get("/data", (req, res) => {
     setTimeout(() => {
         res.json(data);
-    }, 2000);
+    }, 0);
 })
 
 /****************end routes************/
