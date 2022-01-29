@@ -40,7 +40,7 @@ export default function ContextWrapper({ children }) {
     }
 
 
-    
+
 
     function removeFromCart(id) {
         setCart(cart.filter(item => item.id !== id));
@@ -48,14 +48,14 @@ export default function ContextWrapper({ children }) {
 
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
-            <FilterContext.Provider value={{ filter, setFilter }}>
+        <FilterContext.Provider value={{ filter, setFilter }}>
+            <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
                 <UserContext.Provider value={{ user, setUser, productArr, setproductArr }}>
                     <SideBarContext.Provider value={{ open, setOpen }}>
                         {children}
                     </SideBarContext.Provider>
                 </UserContext.Provider>
-            </FilterContext.Provider>
-        </CartContext.Provider>
+            </CartContext.Provider >
+        </FilterContext.Provider>
     );
 }

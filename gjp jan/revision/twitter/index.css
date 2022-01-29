@@ -1,0 +1,30 @@
+.outer{
+    background: lightblue;
+}
+
+.header{
+    background: lightgreen;
+}
+
+.sidebar{
+    background: hotpink;
+}
+.content{
+    background: tomato;
+}
+
+.footer{
+    background: lightgrey;
+}
+
+
+
+.outer *{
+    outline: 1px solid red;
+}
+
+.item{
+    height: 50px;
+    width: 50px;
+    background: lightcyan;
+}

@@ -25,6 +25,7 @@ export default function Content() {
     let newArrFilterCategory = newArr.filter(product => product.category.includes(category));
 
     return (
+        
         <div style={{ overflow: "auto" }}>
             <MyImageSlider />
             <div style={{position:"relative",top:"-300px"}}>
