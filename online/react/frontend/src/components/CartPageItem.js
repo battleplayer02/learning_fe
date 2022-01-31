@@ -4,16 +4,14 @@ import styles from "../CartItem.module.css";
 import CartContext from '../context/CartContext';
 export default function CartPageItem({ id, name, price, countInStock, countInCart, image, }) {
     let [count, setCount] = useState(countInCart);
-    const { removeFromCart } = useContext(CartContext);
+    const { removeFromCart, removeOne, addOne } = useContext(CartContext);
+
     const increase = () => {
-        if (countInStock > count) {
-            setCount(count + 1);
-        }
+        addOne(id);
     }
+
     const decrease = () => {
-        if (count > 1) {
-            setCount(count - 1);
-        }
+        removeOne(id);
     }
 
 
@@ -34,7 +32,7 @@ export default function CartPageItem({ id, name, price, countInStock, countInCar
                 </div>
                 <div className={styles.quantity}>
                     <button className={styles.quantityBtn} onClick={decrease}>-</button>
-                    {count}
+                    {countInCart}
                     <button className={styles.quantityBtn} onClick={increase}>+</button>
                 </div>
                 <div className={styles.deleteBtn}>

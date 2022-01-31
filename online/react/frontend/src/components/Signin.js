@@ -30,7 +30,7 @@ export default function Signin() {
         } else {
             setPasswordCheck(false)
         }
-        let responceData = await axios.post("http://localhost:8080/api/login", {
+        let responceData = await axios.post("/api/login", {
             username: email,
             password
         })
