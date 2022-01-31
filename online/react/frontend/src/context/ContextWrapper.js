@@ -14,7 +14,7 @@ export default function ContextWrapper({ children }) {
     });
     const [cart, setCart] = useState([])
     function addToCart(id, name, price, image, category, brand, countInStock) {
-        if (countInStock == 0) return;
+        if (countInStock === 0) return;
         // if the product is already in the cart, increase the quantity
         let search = cart.find(item => item.id === id);
         if (search) {

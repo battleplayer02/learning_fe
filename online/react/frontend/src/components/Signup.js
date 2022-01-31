@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom"
 
@@ -40,7 +40,7 @@ export default function Signup() {
             password
         })
         console.log("responceData: ", responceData);
-        if (responceData.data.success == 1) {
+        if (responceData.data.success === 1) {
             // redirect to the home page
             navigate("/");
         } else {
