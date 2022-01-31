@@ -2,8 +2,11 @@ let loginRouter = require("express").Router();
 let bcrypt = require("bcryptjs");
 let jwt = require("jsonwebtoken");
 const { SECRET } = require("../utils/SECRET");
+const { loginMiddleware } = require("./loginMiddleware");
+
 let db = [];
-loginRouter.post("/login", async (req, res) => {
+
+loginRouter.post("/login", loginMiddleware, async (req, res) => {
     let { username, password } = req.body;
     let result = db.find(user => user.username === username);
     if (result) {
@@ -32,7 +35,7 @@ loginRouter.post("/login", async (req, res) => {
     }
 })
 
-loginRouter.post("/signup", async (req, res) => {
+loginRouter.post("/signup", loginMiddleware, async (req, res) => {
     let { username, password } = req.body;
     password = await bcrypt.hash(password, 10);
     let token = jwt.sign({ username, password }, SECRET, { expiresIn: "1h" });

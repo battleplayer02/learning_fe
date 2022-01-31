@@ -11,11 +11,23 @@ app.use(allowOrigin);
 
 // JSON is a data format that is used to exchange data between a server and a client.
 app.use(express.json());
+
+
+// make public folder accessible
+app.use(express.static(__dirname + '/public'));
+
+
+// globals in node
+// __dirname, __filename
+
 app.get("/", (req, res) => {
+    // res.status(404).json("error 404");
     res.json({
-        message: "Server is running on port 8080"
+        message: "Server is running on port 8080",
+        method: req.method,
+        url: req.url
     });
-})
+});
 
 /*******************routes************/
 
@@ -39,3 +51,9 @@ app.get("/data", (req, res) => {
 app.listen(8080, () => {
     console.log("Server is running on port 8080");
 })
+
+
+
+
+
+/*    frontend(client) method ==>(get/post/put/patch/delete) | middleware(req,res,next) |   ===>> backend(server)          */ 
