@@ -190,6 +190,17 @@ body, html {
     /* border: 1px solid gray; */
     transition: all 100ms ease-in-out;
     overflow: hidden;
+    animation: zoomin 100ms ease-in-out;
+}
+
+@keyframes zoomin {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 .content .product img {

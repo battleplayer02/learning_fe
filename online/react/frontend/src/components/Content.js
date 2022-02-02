@@ -13,7 +13,7 @@ export default function Content() {
 
     useEffect(async () => {
         console.log("only one time when component is mounted")
-        let responseData = await axios.get("http://localhost:8080/data")
+        let responseData = await axios.get("/data")
         console.log(responseData.data);
         setproductArr(responseData.data.products)
     }, []);
@@ -25,6 +25,7 @@ export default function Content() {
     let newArrFilterCategory = newArr.filter(product => product.category.includes(category));
 
     return (
+        
         <div style={{ overflow: "auto" }}>
             <MyImageSlider />
             <div style={{position:"relative",top:"-300px"}}>

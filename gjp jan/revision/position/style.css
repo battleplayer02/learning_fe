@@ -1,0 +1,59 @@
+* {
+    font-family: sans-serif;
+    /* background: red; */
+}
+
+.parent {
+    height: 400px;
+    width: 600px;
+    background-color: lightblue;
+    outline: 1px solid #000000;
+    position: relative;
+}
+
+.child {
+    height: 100px;
+    width: 100px;
+    /* background-color: lightgreen; */
+}
+
+.div-1 {
+    /* position: absolute; */
+    /* z-index: -1; */
+    background: red;
+    bottom: 0;
+    right: 0;
+}
+
+.div-2 {
+    background-color: green;
+    /* position: absolute; */
+    right: 0;
+    top: 0;
+}
+
+.div-3 {
+    background: blue;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* z-index: -1; */
+    /* left: 10px; */
+}
+
+.div-4 {
+    background: yellow;
+    /* position: absolute; */
+    left: 0;
+    bottom: 0;
+}
+
+.message {
+    position: fixed;
+    height: 100px;
+    width: 300px;
+    background-color: lightgreen;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}

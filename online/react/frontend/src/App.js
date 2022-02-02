@@ -4,7 +4,6 @@ import CartPage from "./components/CartPage";
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import MyImageSlider from "./components/MyImageSlider";
 import ProductPage from "./components/ProductPage";
 import SideBar from "./components/SideBar";
 import Signin from './components/Signin';
@@ -18,7 +17,6 @@ export default function App() {
         <div className="container">
           <Header />
           <SideBar />
-          {/* Routing  */}
           <Routes>
             <Route path="/" element={<Content />} />
             <Route path="/signin" element={<Signin />} />

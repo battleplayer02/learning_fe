@@ -27,7 +27,7 @@ export default function Header() {
         <div className="header">
             <div className="header-container">
                 <Link to="/" className="logo">
-                    <img src="images\logo\logo.png" />
+                    <img src="/images/logo/logo.png" />
                 </Link>
                 <div className="search-container">
                     <SearchBar />

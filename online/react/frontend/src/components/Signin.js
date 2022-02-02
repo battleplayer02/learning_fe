@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom"
 import UserContext from '../context/ContextCreator';
@@ -30,12 +30,12 @@ export default function Signin() {
         } else {
             setPasswordCheck(false)
         }
-        let responceData = await axios.post("http://localhost:8080/api/login", {
+        let responceData = await axios.post("/api/login", {
             username: email,
             password
         })
         console.log("responceData: ", responceData);
-        if (responceData.data.success == 1) {
+        if (responceData.data.success === 1) {
             // redirect to the home page
             setUser(responceData.data);
             console.log(responceData.data);

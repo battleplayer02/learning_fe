@@ -18,7 +18,7 @@ export default function ContextWrapper({ children }) {
         // if the product is already in the cart, increase the quantity
         let search = cart.find(item => item.id === id);
         if (search) {
-            if (search.countInStock > search.countInCart + 1) {
+            if (search.countInStock > search.countInCart) {
                 search.countInCart += 1;
                 setCart([...cart]);
             }
@@ -40,7 +40,23 @@ export default function ContextWrapper({ children }) {
     }
 
 
-    
+    function removeOne(id) {
+        let search = cart.find(item => item.id === id);
+        if (search.countInCart > 1) {
+            search.countInCart -= 1;
+            setCart([...cart]);
+        }
+        else {
+            removeFromCart(id);
+        }
+    }
+    function addOne(id) {
+        let search = cart.find(item => item.id === id);
+        if (search.countInStock > search.countInCart) {
+            search.countInCart += 1;
+            setCart([...cart]);
+        }
+    }
 
     function removeFromCart(id) {
         setCart(cart.filter(item => item.id !== id));
@@ -48,14 +64,14 @@ export default function ContextWrapper({ children }) {
 
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
-            <FilterContext.Provider value={{ filter, setFilter }}>
+        <FilterContext.Provider value={{ filter, setFilter }}>
+            <CartContext.Provider value={{ cart, addToCart, removeFromCart, removeOne, addOne }}>
                 <UserContext.Provider value={{ user, setUser, productArr, setproductArr }}>
                     <SideBarContext.Provider value={{ open, setOpen }}>
                         {children}
                     </SideBarContext.Provider>
                 </UserContext.Provider>
-            </FilterContext.Provider>
-        </CartContext.Provider>
+            </CartContext.Provider >
+        </FilterContext.Provider>
     );
 }

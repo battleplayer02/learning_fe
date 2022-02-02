@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom"
 
@@ -35,12 +35,12 @@ export default function Signup() {
         } else {
             setPasswordCheck(false)
         }
-        let responceData = await axios.post("http://localhost:8080/api/signup", {
+        let responceData = await axios.post("/api/signup", {
             username: email,
             password
         })
         console.log("responceData: ", responceData);
-        if (responceData.data.success == 1) {
+        if (responceData.data.success === 1) {
             // redirect to the home page
             navigate("/");
         } else {
