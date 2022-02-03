@@ -1,0 +1,174 @@
+Q.    What are databases ? 
+Ans : Databse is a collection of interreleted data.
+      Which is basically a system of storing data in a structured way. 
+
+Purpose of Databases :
+    1. To store data in a structured way.
+    2. To reduce redundency(data duplication).
+    3. Databases can control the data inconsistency.
+    4. Database facilitates the data manipulation, sharing etc.
+    5. Database enforce standards and data security.
+    6. Database can be used for data analysis.
+
+Various Levels Of Implementation:
+    1. Internal level(Physical Level).
+    2. Conceptual level(Logical Level).
+    3. External level(Network Level).
+
+
+Person 1  ==> withdraw 100  Atm 1000       /// balance = 900
+Person 2  ==> withdraw 200  Atm 1000       /// balance = 800
+
+
+Concept of data independence:
+    1. Physical Independence
+    2. Logical Independence
+
+Different types of datamodels:
+    1. Relational Model
+    2. Object Oriented Model
+    3. Document Oriented Model
+    4. XML Model
+    5. JSON Model
+
+
+
+Relational Database Terminologies:-
+    1. Table:- Relation:- Relation is a set of tuples.
+    2. Tuples:- Row:- Tuple is a set of attributes. 
+    3. Column:- Attribute:- Attribute is a column of a table.
+    4. Cardinality:- Cardinality is the number of tuples in a relation.
+    5. Degree:- Degree is the number of attributes in a relation.
+    6. Primary Key:- Primary Key is the attribute which uniquely identifies a tuple.
+    7. Foreign Key:- Foreign Key is the attribute which uniquely identifies a tuple in another relation.
+    8. Unique Key:- Unique Key is the attribute which uniquely identifies a tuple in a relation.
+    10. Record :- Row of a table.
+
+
+
+
+SQL: Structured Query Language
+     SQL is a query language which is used to query data from a database.
+     SQL is a simple language used for accessing, handeling ad managing data in a Relational Database.
+
+
+
+You write Commands in SQL.
+
+Types of commands in SQL. 
+    -- DDL : Data Definition Language
+           :: Create Table
+           :: Drop Table
+           :: Alter Table
+           :: Create Database
+
+    -- DML : Data Manipulation Language
+           :: Insert
+           :: Update
+           :: Delete
+           :: Truncate
+    
+    -- DCL : Data Control Language
+           :: Grant
+           :: Revoke
+    
+    -- TCL : Transaction Control Language
+           :: Begin
+           :: Commit
+           :: Rollback
+
+    -- DQl : Data Query Language
+           :: Select
+              :: From
+                :: Where
+                :: Group By
+                :: Having
+                :: Order By
+                :: Limit
+                :: Offset
+                :: Union
+                :: Intersect
+                :: Except
+                :: Join   ==> On
+                    :: Cross Join
+                    :: Inner Join
+                    :: Left Join
+                    :: Right Join
+                    :: Full Join
+                    :: Natural Join
+
+Data Types :
+    -- Integer --
+    -- Float   --
+    -- varchar --
+    -- char    -- 
+    -- date
+    -- time
+    -- datetime
+    -- binary
+    -- blob
+    -- text
+
+
+Create Table Command : 
+    create table <table_name> (
+        <column_name> <data_type> <constraint> <default_value>,
+        <column_name> <data_type> <constraint> <default_value>,
+        ...
+        ..
+        .
+
+    )
+
+
+What are constraints Constraint ?
+Restrictions on the data (Attribute).
+    1. Not Null
+    2. Unique
+    3. Primary Key
+    4. Foreign Key
+    5. Check
+    6. Default
+    7. Serial
+    8. References
+
+
+Example Login Table ==> Username, password
+
+Create table login(
+    id serial primary key,
+    username varchar not null unique,
+    password varchar not null unique
+);
+
+Insert Command : 
+
+insert into <table_name> (
+    <column_name>,
+    <column_name>,
+    ...
+    ...
+    .
+) values (
+    <value>,
+    <value>,
+    ...
+    ...
+    .
+);
+
+insert into login values(1, 'admin', 'admin');
+
+
+
+
+
+
+
+
+
+
+
+
+
+

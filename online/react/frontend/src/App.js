@@ -9,7 +9,7 @@ import SideBar from "./components/SideBar";
 import Signin from './components/Signin';
 import Signup from './components/Signup';
 import ContextWrapper from './context/ContextWrapper';
-
+import Test from "./Test"
 export default function App() {
   return (
     <ContextWrapper>
@@ -28,5 +28,6 @@ export default function App() {
         </div>
       </Router>
     </ContextWrapper>
+    // <Test a={50} />
   );
 }
