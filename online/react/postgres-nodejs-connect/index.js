@@ -1,4 +1,5 @@
 let pg = require("pg");
+
 let config = {
     user: "uw8j9xywyopeonb9cwon",
     database: "bk0hqc7dq1flwq4i2n6v",
@@ -8,6 +9,7 @@ let config = {
     max: 10,
     idleTimeoutMillis: 30000
 };
+
 let pool = new pg.Pool(config);
 pool.on("error", function (err, client) {
     console.error("idle client error", err.message, err.stack);
@@ -17,7 +19,8 @@ pool.connect(function (err, client, done) {
         return console.error("error fetching client from pool", err);
     }
 });
-pool.query("SELECT * FROM student", function (err, result) {
+
+pool.query("select * from product_details", function (err, result) {
     if (err) {
         return console.error("error running query", err);
     }

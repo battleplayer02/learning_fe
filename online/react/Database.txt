@@ -1,3 +1,10 @@
+How to setup vscode and clever cloud postgres 
+1. install vscode extension "Postgres client Microsoft"
+2. create a user id on clever cloud
+3. add a addon of postgres to clever cloud
+4. get the credentials of the database from clever cloud.
+
+
 Q.    What are databases ? 
 Ans : Databse is a collection of interreleted data.
       Which is basically a system of storing data in a structured way. 
@@ -158,6 +165,44 @@ insert into <table_name> (
 );
 
 insert into login values(1, 'admin', 'admin');
+
+
+
+
+
+
+
+
+Tables For amazon clone 
+
+Products{
+    id serial 
+    name 
+    price 
+    quantity 
+    description 
+    image 
+    category 
+    countInStock 
+    brand 
+    description
+}
+
+login{
+    id
+    username
+    password 
+}
+
+cart {
+    id 
+    productId
+    quantity
+    userId
+    date 
+}
+
+
 
 
 

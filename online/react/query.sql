@@ -1,3 +1,4 @@
+-- ZsM6RiKLmc7scgZFi2Nb
 Create table login( 
     id serial primary key, 
     username varchar not null unique,
@@ -6,12 +7,41 @@ Create table login(
 
 insert into login values(1, 'admin', 'admin');
 
-select * from login;
 
 insert into login (
     username,
     password
 ) values (
-    'himanshu',
-    '123456'
+    'abcd',
+    '1234567'
 );
+
+
+select * from login;
+
+
+
+
+INSERT INTO sample (name) VALUES ('test');
+
+select * from sample;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
