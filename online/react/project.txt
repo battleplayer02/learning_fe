@@ -65,5 +65,61 @@ Steps to host a react app with backend on heroku
 Complete this till 10PM today with a demo video and describing the concepts learned in on linkedin
 with a hosted link and git repo link of yours 
 
-award get a domain name of your name  example yournamw.<something>
+award get a domain name of your name  example yourname.<something>
+
+
+
+fib(a) = fib(a-1) + fib(a-2)
+
+
+fob(0) = 0
+fob(1) = 1
+fib(2) = fib(1) + fib(0)
+fib(3) = fib(2) + fib(1)
+fib(4) = fib(3) + fib(2)
+fib(5) = fib(4) + fib(3)
+fib(6) = fib(5) + fib(4)
+..
+...
+fib(n) = fib(n-1) + fib(n-2)
+
+fib(n, memo[]){
+    if(memo[n] !== 0){
+        return memo[n]
+    }
+    if(n === 0){
+        return 0
+    }
+    mem[n] = fib(n-1) + fib(n-2)
+    return mem[n];
+}
+
+
+
+react state management libraries 
+1. context API
+2. redux
+3. mobx
+4. flux 
+5. recoil 
+..
+...
+
+
+pure function 
+sum(a,b) = {
+    a + b
+}
+
+impure function 
+input type = text name = A
+input type = text name = B
+
+calc(inputA,inputB) = {
+    a = a + b
+}
+
+
+
+// projects linked post 10 pm 
 

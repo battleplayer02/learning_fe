@@ -3,6 +3,7 @@ import CartContext from '../context/CartContext';
 import CartPageItem from './CartPageItem';
 export default function CartPage() {
     let { cart } = useContext(CartContext);
+    let total = cart.reduce((acc, item) => acc + item.countInCart * item.price, 0);
     console.log(cart);
     let newArr = cart.map(item => (
         <CartPageItem
@@ -20,7 +21,7 @@ export default function CartPage() {
             <div className='content' style={{ flexDirection: "column" }}>
                 <h1>Items in Cart</h1>
                 {newArr}
-                <h1>Total Cost Of cart : 100</h1>
+                <h1>Total Cost Of cart :Rs. {total}</h1>
             </div>
         </>
     );
