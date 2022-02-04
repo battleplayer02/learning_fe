@@ -5,6 +5,7 @@ const loginRouter = require("./controllers/loginController.js");
 const allowOrigin = require('./middlewares/allowOrigin.js');
 const productRouter = require('./controllers/productController.js');
 const verifyToken = require('./middlewares/verifyToken.js');
+const { getAllProducts } = require('./utils/productUtil.js');
 
 // allow cors 
 app.use(allowOrigin);
@@ -37,12 +38,14 @@ app.use("/api", loginRouter);
 /* Products */
 app.use("/api/product", verifyToken, productRouter);
 
-app.get("/data", (req, res) => {
-    setTimeout(() => {
-        res.json(data);
-    }, 0);
-})
 
+app.get("/data", async (req, res) => {
+    let result = await getAllProducts()
+    res.json({
+        success: 1,
+        products: result
+    });
+});
 /****************end routes************/
 
 
@@ -54,6 +57,3 @@ app.listen(8080, () => {
 
 
 
-
-
-/*    frontend(client) method ==>(get/post/put/patch/delete) | middleware(req,res,next) |   ===>> backend(server)          */ 

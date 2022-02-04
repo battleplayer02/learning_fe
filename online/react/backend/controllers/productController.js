@@ -1,4 +1,5 @@
 const data = require("../data");
+const { getAllProducts } = require("../utils/productUtil");
 let productRouter = require("express").Router();
 
 productRouter.get("/:id", (req, res) => {
@@ -19,6 +20,7 @@ productRouter.get("/:id", (req, res) => {
         })
     }
 });
+
 
 
 module.exports = productRouter;

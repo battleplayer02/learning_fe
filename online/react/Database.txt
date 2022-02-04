@@ -195,12 +195,14 @@ login{
 }
 
 cart {
-    id 
-    productId
-    quantity
-    userId
-    date 
+    id          
+    productId  -> fk    -> products   
+    quantity    
+    userId     -> fk    -> login
+    date       Default Current Date
 }
+
+
 
 
 
