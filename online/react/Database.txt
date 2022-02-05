@@ -208,9 +208,26 @@ cart {
 
 
 
+Select Command : Query the data(table/relation) from the database.
+
+    Syntax: 
+        select 
+            <column_name>,
+            <column_name>,
+            <column_name>
+            from <table_name> 
+            [where <condition>] and [<condition>] or [<condition>]
+            [order by <column_name>] 
+            [group by <column_name>] 
+            [having <condition>] 
+            
 
 
 
+
+
+SYNTAX of update command 
+    update <table_name> set <column_name> = <value> where <condition>;
 
 
 
