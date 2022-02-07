@@ -233,6 +233,29 @@ SYNTAX of update command
 
 
 
+Like Operator : 
+    <column_name> like <value>
+    <column_name> not like <value>;
+
+    Definition: 
+        _ : Matches any single character.
+        % : Mathches any string of characters including empty string.
 
 
 
+
+Alter Command: 
+    It is used to modify the existing table structure.
+
+Table student(  id int,  name varchar,  age int);
+
+-- Alter Table student add column
+-- add primary key
+-- add foreign key
+-- add unique key
+
+
+
+-- on delete on update cascade 
+and 
+-- joins 
