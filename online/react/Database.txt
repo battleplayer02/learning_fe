@@ -259,3 +259,13 @@ Table student(  id int,  name varchar,  age int);
 -- on delete on update cascade 
 and 
 -- joins 
+
+
+
+
+
+Types of relations:
+    1. One to One    : 1...1  
+    2. One to Many   : 1...*  
+    3. Many to Many  : *...*  
+    4. Many to One   : *...1  
