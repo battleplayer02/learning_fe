@@ -25,6 +25,7 @@ WTF JS | https://github.com/denysdovhan/wtfjs
 | Redux Basics | https://www.youtube.com/watch?v=poQXNp9ItL4&t=5011s |
 |Redux Thunk|https://www.freecodecamp.org/news/redux-thunk-explained-with-examples/|
 |Functional Programming Concepts|https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0#:~:text=Functional%20programming%20(often%20abbreviated%20FP,state%20flows%20through%20pure%20functions.|
+|useRedcerHook|https://reactjs.org/docs/hooks-reference.html#usereducer|
 
 * Get Inspired By Some amazing portfolio websites 
     * https://github.com/emmabostian/developer-portfolios
