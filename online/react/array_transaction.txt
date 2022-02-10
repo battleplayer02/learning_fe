@@ -1,0 +1,194 @@
+101/02/2022
+
+
+insert into company
+values(2, 'B', 1,'IT',1);
+insert into company
+values(3, 'C', 2,'Marketing',1);
+SAVEPOINT sp1;
+insert into company
+values(4, 'D', 3,'Marketing',1);
+SAVEPOINT sp2;
+ROLLBACK TO sp1;
+ROLLBACK TO sp2;
+insert into company
+values(5, 'E', 3,'Marketing',1);
+SELECT * FROM company;
+end;
+begin;
+
+begin;
+insert into company
+values(2, 'B', 1,'IT',1);
+drop TABLE  company;
+TRUNCATE company;
+ROLLBACK;
+SELECT * FROM company;
+end;
+
+-- \d company;
+
+
+-- TCL : Transaction Control Language
+
+
+
+
+
+
+CREATE TABLE sal_emp (
+    name text,
+    pay_by_quarter integer[],
+    schedule text[][]
+);
+select pay_by_quarter[2] from sal_emp;
+
+INSERT INTO sal_emp
+    VALUES (
+    'Bill',
+    '{1, 2, 3, 4}',
+    '{{"meeting", "lunch"}, {"training", "presentation"}}'
+);
+
+INSERT INTO sal_emp
+    VALUES ('Carol',
+    '{20000, 25000, 25000, 25000}',
+    '{{"breakfast", "consulting"}, {"meeting", "lunch"}}');
+
+-- int arr[] = {1,2,3,4}
+update sal_emp set pay_by_quarter[1] = pay_by_quarter[1]*2; 
+
+select * from sal_emp;
+
+select * from sal_emp where pay_by_quarter[1] > 10000;
+
+
+
+
+
+4 rows 
+
+
+student{
+    name,
+    rollnumber,
+    ...
+    phone_no[]   // 2 values 
+    marks[]      // 4 VALUES
+}
+
+
+
+;
+create table student(
+    rollnumber serial PRIMARY KEY,
+    name text,
+    phone_no integer[],
+    marks integer[]
+);
+
+
+select * from student;
+
+insert into student values(1,'A','{1234567890,1234567890}','{90,80,70,60}');
+insert into student values(2,'B','{1834567890,1234545890}','{92,82,72,62}');
+insert into student values(3,'C','{1834567890,1234545890}','{88,78,98,78}');
+insert into student values(4,'D','{1834567890,1234545890}','{45,72,45,33}');
+
+-- show the the details from student 
+-- Hindi as marks[1] 
+-- english marks[2] 
+-- maths marks[3] 
+-- science marks[4]
+
+select marks[1] hindi from student;
+
+
+select marks[1] hindi,
+marks[2] english,
+marks[3] maths,
+marks[4] science,name, from student;
+
+-- calculate the avg of marks of all the students;
+
+-- SELECT AVG(marks[1]) as hindi from student;
+-- select AVG(marks), name form student;
+
+
+select ((marks[1]+marks[2]+marks[3]+marks[4])/4) class_percentage
+from student;
+
+
+-- find the average percentage of the class
+
+-- show the details of those students who have got 
+-- more than averge marks of the class 
+
+select name,(marks[1]+marks[2]+marks[3]+marks[4])/4 from student 
+where ((marks[1]+marks[2]+marks[3]+marks[4])/4) 
+        > 
+(select avg((marks[1]+marks[2]+marks[3]+marks[4])/4) mark from student)
+
+;
+select * from student;
+
+
+student [
+    name,
+    rollnumber
+]
+
+marks{
+    id,
+    hindi,
+    english,
+    maths,
+    science,
+    student_id integer
+}
+;
+create table student2 (
+    rollnumber serial PRIMARY KEY,
+    name text
+);
+
+
+insert into student2 values(1,'A');
+insert into student2 values(2,'B');
+insert into student2 values(3,'C');
+insert into student2 values(4,'D');
+
+create table marks(
+    id serial PRIMARY KEY,
+    hindi integer,
+    english integer,
+    maths integer,
+    science integer,
+    student_id integer,
+    FOREIGN KEY (student_id) REFERENCES student2(rollnumber)
+);
+
+
+insert into marks values(1,90,80,70,60,1);
+insert into marks values(2,92,82,72,62,2);
+insert into marks values(3,88,78,98,78,3);
+insert into marks values(4,45,72,45,33,4);
+
+
+select * from marks;
+
+
+select * from marks 
+inner join student2 
+on marks.student_id = student2.rollnumber;
+
+
+
+
+select * from marks inner join student2 
+on marks.student_id = student2.rollnumber
+where  
+((english+hindi+maths+science)/4) > 
+( select avg((english+hindi+maths+science)/4) from marks);
+
+

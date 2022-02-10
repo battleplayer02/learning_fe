@@ -36,12 +36,14 @@ select * from sample;
 
 
 
+select * from table1 right join table2 on table1.value = table2.value;
+
+select * from table1 left join table2 on table1.value = table2.value;
 
 
+-- full outer join
 
-
-
-
+select * from table1 full outer join table2 on table1.value = table2.value;
 
 
 

@@ -269,3 +269,62 @@ Types of relations:
     2. One to Many   : 1...*  
     3. Many to Many  : *...*  
     4. Many to One   : *...1  
+
+
+
+09/02/2022
+
+Define Joins?
+
+
+Types of PostgreSQL JOIN 
+•	Cross Join
+•	Inner Join
+•	Left Outer Join 
+•	Right Outer Join 
+•	Full Outer Join 
+
+SYNTAX of PostgreSQL JOIN
+select * from 
+<table1(left table)> <type> join <table2(right table)> 
+on 
+<column1> = <column2>;
+
+
+10/12/22
+Define Transactions?
+A transaction is a very small unit of a program(commands/instructions) and it may contain several lowlevel tasks.
+A transaction in a database system must maintain Atomicity, Consistency, Isolation, and Durability
+− commonly known as ACID properties − in order to ensure accuracy, completeness, and data integrity.
+
+
+ACID Properties:-
+    1. Atomicity
+    2. Consistent
+    3. Isolated
+    4. Durable
+
+Durability − The database should be durable enough to hold all its latest updates even if the 
+             system fails or restarts. If a transaction updates a chunk of data in a database and commits, 
+             then the database will hold the modified data. If a transaction commits but the system fails 
+             before the data could be written on to the disk, then that data will be updated once the 
+             system springs back into action.
+
+
+Begin: A transaction is beginning to initiate the execution of multiple SQL statements. 
+       Beginning of a transaction guarantees the atomicity of a transaction. 
+       After beginning, either it can be committed to making the modifications permanent or
+       rolled back to undo the changes to leave the database unaltered.
+
+Rollback: By rolling back a transaction, a transaction is explicitly closed and any modifications 
+          made by the transaction is discarded.
+
+Savepoint: SAVEPOINT command is used to temporarily save a transaction so that you can rollback 
+           to that point whenever required.
+
+           Stores the current state of the database;
+
+End: End the transaction;
+
+Commit: Commit the transaction;
+
