@@ -328,3 +328,30 @@ End: End the transaction;
 
 Commit: Commit the transaction;
 
+
+
+-- 11/02/2022
+
+
+-- Views : Views are snapshots of the specified select query 
+
+SYNTAX-:
+CREATE [OR REPLACE] VIEW view_name AS
+  SELECT columns
+  FROM tables
+  [WHERE conditions];
+
+
+Command to view the data from views:
+SELECT * FROM view_name;
+
+
+Functions or Stored Procedures:
+create [or replace] procedure/function procedure_name(parameter_list)
+language plpgsql
+as $$
+declare
+-- variable declaration
+begin
+-- stored procedure body
+end; $$
