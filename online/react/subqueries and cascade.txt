@@ -1,0 +1,248 @@
+create table company(
+    id serial primary key,
+    name varchar(255) not null,
+    salary integer not null,
+    department varchar not null
+);
+
+drop table if exists company;
+
+insert into company(name, salary, department) 
+values('A', 1000000, 'IT');
+insert into company(name, salary, department)
+values('B', 2000000, 'IT');
+insert into company(name, salary, department)
+values('C', 300000, 'IT');
+insert into company(name, salary, department)
+values('D', 400000, 'SALES');
+insert into company(name, salary, department)
+values('E', 500000, 'SALES');
+insert into company(name, salary, department)
+values('F', 600000, 'Marketing');
+insert into company(name, salary, department)
+values('G', 605000, 'Marketing');
+insert into company(name, salary, department)
+values('H', 700000, 'HR');
+insert into company(name, salary, department)
+values('I', 750000, 'HR');
+
+SELECT * FROM company;
+
+
+-- Get the number of employees in the company
+select count(*) from company;
+
+-- what is the average salary of the company
+select avg(salary) from company;
+
+-- get the avg salary of each department
+select department,count(*), avg(salary)
+from company group by department;
+
+
+-- can we show the name COLUMN in the above query?
+-- No, because the column name has to appear in the group by clause.
+
+
+
+-- add a COLUMN manager_id(int) in company table
+alter table company add column manager_id int;
+
+-- rename column mnger_id to manager_id
+alter table company rename column manger_id to manager_id;
+
+-- update the manager id column of IT department with
+-- the id=1
+
+update company set manager_id=1 
+where department='IT';
+
+update company set manager_id=5 
+where department ='SALES';
+update company set manager_id=9 
+where department ='HR';
+update company set manager_id= 7
+where department ='Marketing';
+
+
+
+alter table company DROP COLUMN manager_id;
+
+-- update manager_id of all departments 
+-- with the id of heighst salary employee
+
+select * from company;
+-- update company set 
+-- manger_id = (
+--   select id from company as c1 where salary = (select max(salary) from company as c2 where c1.department = c2.department)
+-- ) where manger_id = c1.manger_id;
+
+-- get heightest salary of all the departments
+select max(salary)
+from company group by department;
+
+
+
+
+
+
+
+drop table buildings;
+drop TABLE rooms;
+
+create table buildings(
+  building_no serial PRIMARY KEY,
+  building_name varchar(255) ,
+  address varchar(255) 
+);
+
+CREATE TABLE rooms (
+    room_no SERIAL PRIMARY KEY,
+    room_name VARCHAR (255) ,
+    building_no INT ,
+    FOREIGN KEY (building_no) 
+    REFERENCES buildings (building_no) on delete set null 
+    on update cascade
+);
+
+select * from buildings;
+select * from rooms;
+
+INSERT INTO buildings(building_name,address)
+VALUES('ACME Headquaters','3950 North 1st Street CA 95134'),
+      ('ACME Sales','5000 North 1st Street CA 95134');
+
+
+
+INSERT INTO rooms(room_name,building_no)
+VALUES('Amazon',1),
+      ('War Room',1),
+      ('Office of CEO',1),
+      ('Marketing',2),
+      ('Showroom',2);
+
+-- delete buliding with building_no=2
+
+delete from buildings where building_no=1;
+
+delete from rooms where room_no=2;
+
+
+update buildings set building_no = 200 where building_no=2;
+
+
+
+-- name of the emploee whoes salary is max
+
+-- select name,salary from company where id in(
+--     select id from company where salary = (
+--         select max(salary) from company
+--     )
+-- );
+
+
+-- find max salary in department 
+
+-- get the id of employee whoes salary is max in department
+
+
+-- get name of the person getting max salary in department
+select department,max(salary) from company group by department;
+
+select * from company where salary in (
+    select max(salary) from company group by department
+);
+
+
+select * from company where salary = (select max(salary) from company);
+
+
+
+
+
+
+
+SELECT employee_id, last_name, 
+(CASE WHEN department_id=(
+SELECT department_id from departments WHERE location_id=2500) 
+THEN 'Canada' ELSE 'USA' END) 
+FROM employees;
+
+
+select * ,(
+    case when manager_id is null then 'no manager'
+    when manager_id = (select id from company where id = 1)
+    then 'CEO'
+    else 'EMP'
+    end
+) from company;
+
+
+
+update company set manager_id = null where manager_id = 7;
+
+
+select id from company where id = 1;
+
+
+
+
+
+
+
+
+
+-- get the details of all the employees who earns 
+-- more than the average salary of the department
+-- no group by
+
+select * from company ;
+
+
+select * from company o where salary<(
+   select avg(salary) from company where department = o.department
+);
+
+
+
+
+
+update company 
+set salary = salary + salary * 0.1 where department = 'IT';
+
+
+-- get the name of the department whoes average salary is highest 
+
+
+
+
+
+SELECT department, AVG(SALARY), count(*)
+FROM company GROUP BY department 
+HAVING AVG(SALARY)>=ALL (
+    SELECT AVG(SALARY) FROM company GROUP BY department
+);
+
+select * from company where department =ANY(
+    select department from company 
+    where department = 'IT' or department = 'HR'
+);
+select * from company where department in(
+    select department from company 
+    where department = 'IT' or department = 'HR'
+);
+
+SELECT * from company;
+-- =ANY is equivalent to IN 
+-- some is equivalent to ANY
+
+-- show the details of managers 
+select * from company as o where EXISTS (
+    select * from company where manager_id = o.id 
+);
+
+
+
+-- Find all employees who earn more 
+-- than the average salary in their department.
+

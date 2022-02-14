@@ -1,0 +1,462 @@
+select 
+    name,category,price
+from products
+where price BETWEEN 70 AND 100;
+
+select 
+    name,category,price
+from products
+where category = 'pants';
+
+select 
+    name,category,price
+from products
+where category = 'Pants' and price<100;
+
+
+
+create table sample (data int);
+
+insert into sample values
+    (1),
+    (2),
+    (3),
+    (4),
+    (5),
+    (6),
+    (7),
+    (8),
+    (9),
+    (10);
+
+select sum(data) from sample;
+
+select * from products;
+select count(price),category,sum(price) 
+from products GROUP BY category HAVING sum(price)>400;
+
+
+-- ascending order
+select name,price from products order by price asc;
+
+
+-- descending order
+select name,category from products where price > 100 
+order by price DESC ;
+
+select distinct category from products;
+
+SELECT CATEGORY FROM PRODUCTS GROUP BY CATEGORY;
+
+
+
+
+
+
+
+Write An SQL Query To Fetch “FIRST_NAME” From Worker Table Using 
+The Alias Name As <WORKER_NAME>
+
+
+select FIRST_NAME as WORKER_NAME FROM Worker;
+
+Write An SQL Query To Fetch “FIRST_NAME” From Worker Table In 
+Upper Case.
+
+
+select upper(FIRST_NAME) FROM Worker;
+
+
+
+
+Write An SQL Query To Fetch Unique Values Of DEPARTMENT From 
+Worker Table.
+
+SELECT DISTINCT DEPARTMENT FROM Worker;
+
+Write An SQL Query To Print The First Three Characters Of FIRST_NAME 
+From Worker Table.
+
+
+select substring(first_name,0,3) from worker;
+
+
+
+
+Write An SQL Query That Fetches The Unique Values Of DEPARTMENT 
+From Worker Table And Prints Its Length.
+
+select DISTINCT length(department) from worker ;
+
+
+
+Write An SQL Query To Print The FIRST_NAME And LAST_NAME From 
+Worker Table Into A Single Column COMPLETE_NAME. A Space Char Should 
+Separate Them.
+
+
+select concat(first_name,' ',last_name) from worker;
+
+
+ Write An SQL Query To Print All Worker Details From The Worker Table 
+Order By FIRST_NAME Ascending.
+
+
+select * from worker order by first_name;
+
+Write An SQL Query To Print All Worker Details From The Worker Table 
+Order By FIRST_NAME Ascending And DEPARTMENT Descending.
+
+
+SELECT * FROM Worker ORDER BY FIRST_NAME ASC, DEPARTMENT DESC;
+
+Write An SQL Query To Print Details Of Workers Excluding First Names, 
+“Vipul” And “Satish” From Worker Table.
+
+
+SELECT * FROM Worker WHERE not (FIRST_NAME = 'Vipul' OR FIRST_NAME = 'Satish');
+
+
+Write An SQL Query To Print Details Of The Workers Whose SALARY 
+Lies Between 100000 And 500000.
+
+select * from worker where salary between 100000 and 500000;
+
+
+
+
+
+
+write a sql query to print count of workers in every department.
+
+select department,count(*) from worker group by department;
+
+Write An SQL Query To Fetch The Count Of Employees Working In The 
+Department „Admin‟.
+
+select department,count(*) from worker group by department HAVING department = 'Admin';
+
+select count(*) FROM  worker WHERE department = 'Admin';
+
+
+
+
+select CURRENT_DATE, CURRENT_TIME, CURRENT_TIMESTAMP;
+
+
+
+
+
+
+
+
+
+select * from products ;
+
+
+select * from login;
+
+drop table reviews;
+
+-- alter table to add primary key in products 
+alter table login add primary key (id);
+
+create table reviews (
+    id serial primary key,
+    product_id int,
+    user_id int unique,
+    review text,
+    FOREIGN key(product_id) references products(_id),
+    FOREIGN key(user_id) references login(id)
+);
+
+create table rating (
+    date_of_rating date,
+    id serial primary key,
+    product_id int,
+    user_id int unique,
+    rating int,
+    FOREIGN key(product_id) references products(_id),
+    FOREIGN key(user_id) references login(id)
+);
+
+
+insert into reviews(
+    product_id,
+    user_id,
+    review
+) values (
+    1,
+    19,
+    'good product '
+);
+
+update reviews set review = 'very good product' 
+where product_id = 1 and user_id = 19;
+
+delete from reviews;
+
+
+
+select * from reviews;
+
+
+
+
+
+
+HW
+
+insert 10 users;
+
+insert 5 products;
+
+insert 2 reviews for each 5 products;
+;
+
+
+create table test(name varchar);
+insert into test values ('foo');
+insert into test values ('f');
+insert into test values ('b');
+insert into test values ('foobar');
+insert into test values ('bar');
+select name from test
+where name <> 'bar';
+select name from test
+where not name = 'bar';
+
+
+
+select * from test ;
+
+-- like operator
+select * from test 
+where name like 'f%';
+
+select * from test 
+where name ~~ 'f%';
+
+-- not like operator
+select * from test 
+where not name like 'f%';
+
+select * from test 
+where name !~~ 'f%';
+
+
+select * from test 
+where name like '___';
+
+-- select all the names having 3 letters starting with f
+select * from test 
+where name like 'f__';
+
+-- select all the names having any number of letters 
+-- and having f in it.
+select * from test where name like '%f%';
+
+
+-- select all names having o in it and its length is 3;
+
+select * from test where name ~~ '_o_';
+
+-- /dt;
+
+
+insert into test values ('Foo');
+
+select * from test 
+where name ilike 'F%';
+
+insert into test values ('1');
+insert into test values ('2');
+insert into test values ('3');
+insert into test values ('4');
+insert into test values ('5');
+
+-- select with in operator
+select * from test 
+where name in ('1','2','3','4','5', 'foo');
+
+
+
+select * from products;
+
+-- get the details of the product whoes price 
+-- is between 100 and 200
+
+SELECT _id,name,price from products 
+where price not between 100 and 200;
+
+select * from test where name = 'foo';
+
+
+
+
+insert into test values (null);
+
+select * from test; 
+WHERE name IS NULL;
+
+update test set name = 'empty_value' where name IS NULL;
+
+
+-- update all the names to null whose value is 'empty_value'
+
+
+update test set name = NULL where name='empty_value';
+
+
+select * from test;
+
+
+-- delete from <table_name> where <condition>;
+
+delete from test where name IS NULL;
+
+
+
+-- write a select query to get the count of names whose value is null
+select count(*) null_values  from test where name is null;
+select count(name) from test group by name having name = null;
+
+
+-- opetators like and not like
+-- betweenn 
+-- in
+-- is null
+-- is not null
+-- delete where 
+-- update where
+
+
+
+
+Create table test1(a int not null);
+
+insert into test1 values(1),(2),(3),(4);
+insert into test1 values(5),(6),(7),(8);
+select * from test1;
+
+-- case when
+select a ,
+    (case when a = 1 then 'one'
+    when a = 2 then 'two'
+    when a = 3 then 'three'
+    when a = 4 then 'four'
+    else 'other'
+    end) a_name 
+from test1;
+
+select * from products;
+
+-- write a query to get 
+-- name and price with the 
+-- following case when condition 
+
+-- price < 100 cheap
+-- price = 100 purchase
+-- price > 100 expensive
+
+SELECT products.name,
+  (case when price < 100 then 'cheap'
+  when price = 100 then 'purchase'
+  when price > 100 then 'expensive'
+  end) result
+from products;
+
+
+-- Alter Variations 
+drop TABLE student;
+create table student
+(
+    id int,
+    fname char(10),
+    mname varchar(10),
+    laname varchar(10),
+    dob date,
+    state char(20),
+    x_school varchar(20),
+    primary key (id)
+);
+
+-- Add a new column to the table
+alter table student add column city varchar(20);
+
+
+-- Drop a column from the table
+alter table student_new drop column id;
+
+-- Rename a column
+alter table student rename column city to birth_city;
+select * from student;
+
+
+
+-- change data type of a column
+ALTER TABLE student ALTER COLUMN fname TYPE varchar(20);
+
+insert into student_new values
+( null,'abc','xyz','2020-02-07','a','a',2); 
+
+
+-- rename table name ADD 
+alter table student rename to student_new;
+
+select * from student_new;
+
+-- add a new column not null
+alter table student_new alter column fname SET NOT NULL;
+
+-- drop not null 
+alter table student_new alter column fname DROP NOT NULL;
+
+-- add check constraint
+alter table student_new 
+add constraint age check (dob>'2022-01-01');
+
+-- drop a constraint
+alter table student_new drop constraint age;
+
+-- add PRIMARY  KEY
+alter table student_new add primary key (id);
+
+
+TRUNCATE TABLE student_new;
+
+
+select * from student_new;
+alter table student_new add column id serial PRIMARY key; 
+alter table student_new add column id int; 
+
+-- DROP  id
+alter table student_new drop column id;
+
+
+select * FROM student_new;
+
+
+create table degree (
+    did int,
+    dname varchar(20),
+    primary key (did)
+);
+
+select * from degree;
+-- add a column std_id int
+alter table degree add column std_id int;
+
+
+-- alter TABLE degree and add fk std_id to student_new
+
+alter table degree add 
+constraint fk_std_id 
+foreign key (std_id) 
+references student_new(id);
+
+
+insert into degree values (1,'BE',1);
+
+-- drop fk constraint
+alter table degree drop constraint fk_std_id;
