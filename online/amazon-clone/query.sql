@@ -1,0 +1,1 @@
+create TABLE student( id INTEGER PRIMARY KEY serial, name TEXT, age INTEGER);

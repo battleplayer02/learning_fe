@@ -1,0 +1,69 @@
+Server Client
+
+Client ---> request's server ---> Server 
+
+Get    ---> get a response from server
+Post   ---> update send data along with the request
+Put    ---> update send data along with the request
+Delete ---> delete 
+
+
+
+
+backend folder  ==> server (nodeJS/express)
+frontend folder ==> client (resctJS)
+
+React is a library for building user interfaces in js
+React is used for frontend
+React SPA (Single Page Application)
+There will be only one page in the application only one HTML file
+
+
+
+
+Routing 
+
+Mounting 
+functional components useEffect Hook 
+
+useState i use to create a state variable
+
+setState your component will rerender 
+
+normal variable // will not rerender the component
+
+
+
+useEffect 
+
+
+
+
+Steps to host a react app with backend on heroku
+1. add procxy to the package.json in the frontend folder
+2. create userid on heroku 
+3. create a heroku app
+4. create a new repo
+    Git commands 
+    a. git init
+    b. git add .
+    c. git commit -m "initial commit"
+    d. git remote add origin https://git.heroku.com/<appname>.git
+    e. git push origin master
+5. change the port in your backend server to PORT = process.env.PORT
+6. run the npm run build command in the frontend folder
+7. create a public folder in backend
+8. copy the build folder from the frontend folder to the public folder of the backend
+9. write the npm start script in the script section of package.json in the backend folder
+10. again push changes to git repo
+11. go to heroku select your app and then 
+12. go to deploy section and select your app and then
+13. connect to github 
+14. select the master branch and then
+15. click on deploy button  
+
+Complete this till 10PM today with a demo video and describing the concepts learned in on linkedin
+with a hosted link and git repo link of yours 
+
+award get a domain name of your name  example yournamw.<something>
+

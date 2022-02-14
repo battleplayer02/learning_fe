@@ -5,33 +5,43 @@
 // }, 1000 * 5);
 
 
+// let arr1 = [2, 3, 4, 5]
+// let arr2 = [2, 3, 4, 5]
+
+// let arr3 = []
+// console.log([...arr1,...arr2])
+
+
+
+
+//callback function ,ek function ke ander ek function ko as an argument pass krna
 
 // // lines 10 min
 // console.log("end");
 
 // pending fulfillment rejected
 
-// let balance = 1000;
-// function withdraw(err, success) {
-//     if (balance > 0) {
-//         balance -= 100;
-//         success("withdrawn 100" + " " + balance);
-//     } else {
-//         err("insuficient funds");
-//     }
-// }
+let balance = 1000;
+function withdraw(err, success) {
+    if (balance > 0) {
+        balance -= 100;
+        success("withdrawn 100" + " " + balance);
+    } else {
+        err("insuficient funds");
+    }
+}
 
 
-// withdraw(
-//     err => {
-//         console.log("err", err);
-//     },
-//     success => {
-//         console.log("success", success);
-//     });
+withdraw(
+    err => {
+        console.log("err", err);
+    },
+    success => {
+        console.log("success", success);
+    });
 
 
-
+// map
 
 
 
