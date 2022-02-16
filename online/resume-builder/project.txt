@@ -1,0 +1,15 @@
+1. npx create-react-app --> creates a boiler plate  for your react app
+2. folder ->>components
+            -Layout.js
+                    --subcomponents
+                        -Header.js 
+            ->>pages
+                login,signup etc
+            ->> Styles
+                -global.css
+                and so on
+3. create account on firebase
+4. create a project
+5. go to authentication page and enable email amd password authentication.
+6. Go to project overview and enable web project
+7. npm i firebase

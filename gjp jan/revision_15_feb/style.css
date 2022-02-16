@@ -1,0 +1,11 @@
+.pos{
+    background: red;
+    position: fixed;
+    right: 50px;
+    bottom: 10px;
+}
+.stick{
+    background: yellow;
+    position: sticky;
+    top: 100px;
+}

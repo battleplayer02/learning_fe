@@ -14,7 +14,7 @@ let data = JSON.parse(localStorage.getItem("todos")) || [];
 counter = data.length;
 
 for (let i = 0; i < data.length; i++) {
-    // add the i index aas id
+    // add the i index as id
     let todotext = `<div class="todo-list" todo-id='${i}'>
                         <div class="todo-header">
                             <span id='todo-header-text'>${data[i].title}</span>

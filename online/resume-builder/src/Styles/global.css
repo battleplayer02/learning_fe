@@ -17,6 +17,9 @@ html,body,#root{
 }
 .content{
     /* background: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer{
     background: black;

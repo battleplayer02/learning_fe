@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">
+        Click here 1
+    </button>
+    <button class="btn">
+        Click here 2
+    </button>
+    <div style="background-color: aqua; height: 100px; width: 100px; display: none;"></div>
+    <div style="background-color: green; height: 100px; width: 100px; display: none;"></div>
+    <script>
+        let btn = document.querySelectorAll(".btn");
+        // btn = [Click here 1, Click here 2]
+        let box = document.querySelectorAll("div");
+        // box = [blue wala div , green wala div]
+        btn[0].addEventListener("click",function(){
+            box[0].style.display="flex";
+        });
+        btn[1].addEventListener("click",function(){
+            box[1].style.display="flex";
+        });
+        let arr = [1,2,3,4,5];
+        console.log(arr)
+        arr.push(7);
+        console.log(arr)
+        // array me add krne ke liya
+        // array.push() isse last index par add hota hai
+        // array.pop() isse last index ki value delete hoti hai
+        // array.shift() isse first value delete ho jaegi
+        // array.unshift() isse first index par value add ho jaegi
+        // function bluebox(){
+        // }
+    </script>
+</body>
+</html>
